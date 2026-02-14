@@ -1,0 +1,911 @@
+{% extends "base.html" %}
+
+{% block title %}Laptop Guide | Home{% endblock %}
+
+{% block content %}
+{% set levels = [("beginner", "Beginner"), ("advanced", "Advanced"), ("enthusiast", "Enthusiast")] %}
+
+<div class="home-page">
+<section class="hero card hero-pro" data-reveal>
+    <div class="hero-split">
+        <div class="hero-main">
+            <p class="hero-kicker">Professional Laptop Decision Framework</p>
+            <h2>Buy the Right Laptop. Not Just the Popular One.</h2>
+            <p>Benchmark-backed, SKU-aware laptop decisions with sustained performance focus.</p>
+            <div class="hero-quick-points">
+                <article class="hero-point">
+                    <h4>Start With Intent</h4>
+                    <p>Pick your primary workload first, then shortlist only relevant configurations.</p>
+                </article>
+                <article class="hero-point">
+                    <h4>Validate The SKU</h4>
+                    <p>Compare exact thermals, power behavior, and memory setup before checkout.</p>
+                </article>
+                <article class="hero-point">
+                    <h4>Buy For Longevity</h4>
+                    <p>Favor sustained performance and upgrade path over short benchmark bursts.</p>
+                </article>
+            </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+            <div class="character-lab" id="characterLab">
+                <div class="character-stage">
+                    <div class="orbit-ring ring-one"></div>
+                    <div class="orbit-ring ring-two"></div>
+                    <img
+                        src="{{ url_for('static', filename='img/character_analyst.svg') }}"
+                        alt="Analyst character"
+                        class="character-avatar is-active"
+                        data-character-card
+                        data-character-name="Ari - Performance Analyst"
+                        data-character-tip="I focus on sustained performance, not short burst peaks."
+                    >
+                    <img
+                        src="{{ url_for('static', filename='img/character_gamer.svg') }}"
+                        alt="Gamer character"
+                        class="character-avatar"
+                        data-character-card
+                        data-character-name="Vik - Gaming Specialist"
+                        data-character-tip="GPU power class and cooling decide real gaming experience."
+                    >
+                    <img
+                        src="{{ url_for('static', filename='img/character_creator.svg') }}"
+                        alt="Creator character"
+                        class="character-avatar"
+                        data-character-card
+                        data-character-name="Mira - Creator Advisor"
+                        data-character-tip="Balanced CPU, VRAM, and RAM are key for editing timelines."
+                    >
+                    <img
+                        src="{{ url_for('static', filename='img/character_student.svg') }}"
+                        alt="Student character"
+                        class="character-avatar"
+                        data-character-card
+                        data-character-name="Noah - Student Guide"
+                        data-character-tip="Value and battery stability matter more than marketing hype."
+                    >
+                </div>
+                <div class="character-panel">
+                    <p class="character-name" data-character-name-target>Ari - Performance Analyst</p>
+                    <p class="character-tip" data-character-tip-target>I focus on sustained performance, not short burst peaks.</p>
+                    <div class="character-nav">
+                        <button type="button" class="character-dot is-active" data-character-dot="0" aria-label="Show analyst"></button>
+                        <button type="button" class="character-dot" data-character-dot="1" aria-label="Show gamer"></button>
+                        <button type="button" class="character-dot" data-character-dot="2" aria-label="Show creator"></button>
+                        <button type="button" class="character-dot" data-character-dot="3" aria-label="Show student"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="card home-priority-strip" data-reveal>
+    <div class="priority-header">
+        <p class="hero-kicker">Fast Navigation</p>
+        <h3>Start In This Order</h3>
+        <p class="section-summary">Use this sequence to reduce decision noise and reach a safe shortlist faster.</p>
+    </div>
+    <div class="priority-grid">
+        <a class="priority-item" href="#use-case-engine">
+            <span class="priority-step">1</span>
+            <span class="priority-text">
+                <strong>Choose Goal</strong>
+                Match the laptop class to your primary workload first.
+            </span>
+        </a>
+        <a class="priority-item" href="#component-deep-dive">
+            <span class="priority-step">2</span>
+            <span class="priority-text">
+                <strong>Validate Components</strong>
+                Check CPU, GPU, RAM, storage, and thermals as a set.
+            </span>
+        </a>
+        <a class="priority-item" href="#final-checklist">
+            <span class="priority-step">3</span>
+            <span class="priority-text">
+                <strong>Lock Decision</strong>
+                Confirm confidence meter and final checklist before payment.
+            </span>
+        </a>
+    </div>
+    <div class="trust-micro-strip" aria-label="Trust signals">
+        <span class="meta-chip">Updated: {{ guide.snapshot_date }}</span>
+        <span class="meta-chip">Methodology: {{ guide.benchmark_methodology.principles|length }} checks</span>
+        <span class="meta-chip">Confidence Layers: {{ guide.data_confidence_labels|length }}</span>
+        <span class="meta-chip">SKU-level framework</span>
+    </div>
+</section>
+
+<div class="home-workspace">
+    <aside class="card home-sidebar" data-reveal>
+        <p class="hero-kicker sidebar-kicker">Sidebar Navigation</p>
+        <nav class="side-nav" data-side-nav>
+            <a href="#use-case-engine" class="is-active" data-side-link>Primary Goal Tabs</a>
+            <a href="#start-here" data-side-link>Quick Rules</a>
+            <a href="#buying-framework" data-side-link>5-Step Stepper</a>
+            <a href="#component-deep-dive" data-side-link>Component Explorer</a>
+            <a href="#red-flags" data-side-link>Red Flags</a>
+            <a href="#longevity" data-side-link>Longevity</a>
+            <a href="#confidence-meter" data-side-link>Confidence Meter</a>
+            <a href="#final-checklist" data-side-link>Final Checklist</a>
+        </nav>
+        <p class="note">Use filter chips and inline expand in the component explorer to avoid long dropdown scanning.</p>
+    </aside>
+
+    <div class="home-main-stack">
+        <section class="card" id="use-case-engine" data-reveal>
+            <h3>Choose Your Primary Goal</h3>
+            <p class="section-summary">Select one dominant goal so every later comparison stays relevant.</p>
+            <p class="note">Tabs replace dropdown behavior so you can switch contexts instantly.</p>
+            <div class="use-case-tabs" role="tablist" aria-label="Primary goal tabs">
+                {% for row in guide.use_case_ranking %}
+                <button
+                    type="button"
+                    class="use-case-tab{% if loop.first %} is-active{% endif %}"
+                    data-use-case-tab="{{ loop.index0 }}"
+                    role="tab"
+                    aria-selected="{% if loop.first %}true{% else %}false{% endif %}"
+                >
+                    {% if row.use_case == "Gaming" %}🎮{% elif row.use_case == "Coding" %}💻{% elif row.use_case == "Creator" %}🎬{% elif row.use_case == "Battery-first" %}🔋{% else %}🎓{% endif %}
+                    {{ row.use_case }}
+                </button>
+                {% endfor %}
+            </div>
+            <div class="use-case-tab-panels">
+                {% for row in guide.use_case_ranking %}
+                <article class="use-case-panel{% if loop.first %} is-active{% endif %}" data-use-case-panel="{{ loop.index0 }}" {% if not loop.first %}hidden{% endif %}>
+                    <div class="component-grid">
+                        <article class="mini-panel">
+                            <h4>Best Fit</h4>
+                            <p>{{ row.best_fit }}</p>
+                        </article>
+                        <article class="mini-panel">
+                            <h4>Second Fit</h4>
+                            <p>{{ row.second_fit }}</p>
+                        </article>
+                        <article class="mini-panel">
+                            <h4>Reason</h4>
+                            <p>{{ row.why }}</p>
+                        </article>
+                    </div>
+                    <p><strong>What To Avoid:</strong>
+                        {% if row.use_case == "Gaming" %}
+                        8GB RAM, weak cooling, and unknown GPU power behavior.
+                        {% elif row.use_case == "Coding" %}
+                        Outdated low-core CPUs and low memory headroom.
+                        {% elif row.use_case == "Creator" %}
+                        Low VRAM, 256GB SSD, and memory bottlenecks.
+                        {% elif row.use_case == "Battery-first" %}
+                        High-power CPU classes with always-high refresh settings.
+                        {% else %}
+                        Entry specs with no upgrade path.
+                        {% endif %}
+                    </p>
+                </article>
+                {% endfor %}
+            </div>
+        </section>
+
+        <section class="home-grid-2 section-balanced" data-reveal>
+            <article class="card" id="start-here">
+                <h3>Start Here - 60-Second Rule</h3>
+                <p class="section-summary">If you are in a hurry, this table gives safe first-pass specs by user profile.</p>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>If You Are</th>
+                                <th>Choose This</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Gamer</td><td>Dedicated GPU + H/HX CPU + 16GB RAM</td></tr>
+                            <tr><td>Coder</td><td>6-8 core CPU + 16GB RAM</td></tr>
+                            <tr><td>Creator</td><td>Strong CPU + RTX-class GPU + 32GB RAM</td></tr>
+                            <tr><td>Student</td><td>Mid-tier CPU + 16GB + NVMe SSD</td></tr>
+                            <tr><td>Traveler</td><td>U/P class CPU + 60Wh+ battery</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </article>
+
+            <article class="card">
+                <h3>2026 Safe Minimum</h3>
+                <p class="section-summary">Treat this as the no-regret baseline for mainstream usage in 2026.</p>
+                <ul class="warning-list">
+                    {% for item in guide.safe_baseline_2026.specs %}
+                    <li>{{ item }}</li>
+                    {% endfor %}
+                </ul>
+                <p class="reality-tip">{{ guide.safe_baseline_2026.note }}</p>
+            </article>
+        </section>
+
+        <section class="card" id="buying-framework" data-reveal>
+            <h3>How To Buy In 5 Steps</h3>
+            <p class="section-summary">Move left to right and avoid skipping step order to prevent spec mismatch errors.</p>
+            <div class="stepper-nav" role="tablist" aria-label="Buying steps">
+                {% for step in guide.quick_steps %}
+                <button
+                    type="button"
+                    class="stepper-btn{% if loop.first %} is-active{% endif %}"
+                    data-step-btn="{{ loop.index0 }}"
+                    role="tab"
+                    aria-selected="{% if loop.first %}true{% else %}false{% endif %}"
+                >
+                    <span class="step-number">{{ loop.index }}</span>
+                    <span>{{ step.title }}</span>
+                </button>
+                {% endfor %}
+            </div>
+            <div class="stepper-progress"><span data-step-progress></span></div>
+            <div class="stepper-panels">
+                {% for step in guide.quick_steps %}
+                <article class="stepper-panel{% if loop.first %} is-active{% endif %}" data-step-panel="{{ loop.index0 }}" {% if not loop.first %}hidden{% endif %}>
+                    <h4>Step {{ loop.index }} - {{ step.title }}</h4>
+                    <p>{{ step.text }}</p>
+                </article>
+                {% endfor %}
+            </div>
+        </section>
+
+        <section class="home-grid-2 section-balanced" data-reveal>
+            <article class="card" id="performance-reality">
+                <h3>Performance Is Not Just The Chip Name</h3>
+                <p class="section-summary">Real speed comes from cooling, power behavior, and memory setup, not model name alone.</p>
+                <ul class="warning-list">
+                    {% for item in guide.performance_reality_check.points %}
+                    <li>{{ item }}</li>
+                    {% endfor %}
+                </ul>
+                <p class="reality-tip">{{ guide.performance_reality_check.tip }}</p>
+            </article>
+
+            <article class="card" id="methodology">
+                <h3>Our Testing Method</h3>
+                <p class="section-summary">Every recommendation is framed around sustained behavior and transparent assumptions.</p>
+                <p class="reality-tip">{{ guide.stability_philosophy }}</p>
+                <ul class="warning-list">
+                    {% for item in guide.benchmark_methodology.principles %}
+                    <li>{{ item }}</li>
+                    {% endfor %}
+                </ul>
+                <h4>Data Confidence Labels</h4>
+                <div class="source-badge-row">
+                    {% for item in guide.data_confidence_labels %}
+                    <span class="source-badge" title="{{ item.meaning }}">{{ item.label }}</span>
+                    {% endfor %}
+                </div>
+                <div class="evidence-callout-row">
+                    <article class="evidence-callout">
+                        <h4>Evidence First</h4>
+                        <p>{{ guide.benchmark_methodology.principles|length }} methodology checks are used before ranking any configuration.</p>
+                    </article>
+                    <article class="evidence-callout">
+                        <h4>Bias Control</h4>
+                        <p>Confidence labels separate lab-tested, community-verified, and estimated data ranges.</p>
+                    </article>
+                </div>
+                <div class="methodology-details">
+                    <button type="button" class="accordion-toggle" data-accordion-target="guideTransparency" aria-controls="guideTransparency" aria-expanded="false">
+                        Guide Transparency And Quick Links
+                    </button>
+                    <div id="guideTransparency" class="accordion-panel" hidden>
+                        <div class="hero-meta methodology-meta">
+                            <span class="meta-chip">Last updated: {{ guide.snapshot_date }}</span>
+                            <span class="meta-chip">Transparent Methodology</span>
+                            <span class="meta-chip">SKU-Level Awareness</span>
+                        </div>
+                        <div class="trust-badge-strip methodology-trust">
+                            {% for item in guide.trust_layer.points %}
+                            <span class="trust-chip">{{ item }}</span>
+                            {% endfor %}
+                        </div>
+                        <div class="hero-cta-row guide-link-row">
+                            <a class="btn btn-link" href="{{ url_for('laptops') }}">Find My Laptop</a>
+                            <a class="btn btn-link secondary" href="{{ url_for('benchmarks') }}">View Benchmarks</a>
+                            <a class="btn btn-link secondary" href="#component-deep-dive">Master Buying Guide</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <section class="card" id="component-deep-dive" data-reveal>
+            <h3>Components That Decide Everything</h3>
+            <p class="section-summary">Open each card for full-width detail, then switch level depth to match your expertise.</p>
+            <p class="note">Use filter chips to narrow focus, then inline-expand any card for full details.</p>
+            <div class="filter-chip-row" role="tablist" aria-label="Component filters">
+                <button type="button" class="filter-chip is-active" data-component-chip="all">All</button>
+                <button type="button" class="filter-chip" data-component-chip="performance">Performance</button>
+                <button type="button" class="filter-chip" data-component-chip="memory">Memory & Storage</button>
+                <button type="button" class="filter-chip" data-component-chip="experience">Experience</button>
+                <button type="button" class="filter-chip" data-component-chip="platform">Platform</button>
+            </div>
+            <div class="component-card-grid">
+                {% for component in guide.components %}
+                {% set component_group = "platform" %}
+                {% if component.id in ["cpu", "gpu", "thermals"] %}
+                    {% set component_group = "performance" %}
+                {% elif component.id in ["ram", "storage"] %}
+                    {% set component_group = "memory" %}
+                {% elif component.id in ["display", "battery", "build"] %}
+                    {% set component_group = "experience" %}
+                {% endif %}
+                <article class="component-card" data-component-card data-component-group="{{ component_group }}">
+                    <div class="component-card-head">
+                        <div>
+                            <h4>{{ component.title }}</h4>
+                            <p class="note"><strong>Why it matters:</strong> {{ component.why_important }}</p>
+                        </div>
+                        <button
+                            type="button"
+                            class="btn secondary inline-expand-btn"
+                            data-inline-target="component-panel-{{ component.id }}"
+                            aria-controls="component-panel-{{ component.id }}"
+                            aria-expanded="false"
+                        >
+                            Inline Expand
+                        </button>
+                    </div>
+
+                    <div class="component-body inline-expand-body" id="component-panel-{{ component.id }}" data-level-card hidden>
+                        <div class="section-head">
+                            <h4>{{ component.title }} Breakdown</h4>
+                            <div class="level-switch" role="tablist" aria-label="{{ component.title }} level">
+                                {% for level_key, level_label in levels %}
+                                <button
+                                    class="level-btn{% if loop.first %} is-active{% endif %}"
+                                    type="button"
+                                    data-level-btn="{{ level_key }}"
+                                    aria-selected="{% if loop.first %}true{% else %}false{% endif %}"
+                                >
+                                    {{ level_label }}
+                                </button>
+                                {% endfor %}
+                            </div>
+                        </div>
+
+                        <div class="component-grid">
+                            <article class="mini-panel">
+                                <h4>Popular Companies</h4>
+                                <ul>
+                                    {% for item in component.popular_companies %}
+                                    <li><strong>{{ item.name }}:</strong> {{ item.why }}</li>
+                                    {% endfor %}
+                                </ul>
+                            </article>
+
+                            <article class="mini-panel">
+                                <h4>Available Choices</h4>
+                                <ul>
+                                    {% for item in component.available_choices %}
+                                    <li>{{ item }}</li>
+                                    {% endfor %}
+                                </ul>
+                            </article>
+
+                            <article class="mini-panel">
+                                <h4>Series Explained</h4>
+                                <ul>
+                                    {% for item in component.series_explainer %}
+                                    <li><strong>{{ item.series }}:</strong> {{ item.meaning }}</li>
+                                    {% endfor %}
+                                </ul>
+                            </article>
+                        </div>
+
+                        <div class="component-grid">
+                            <article class="mini-panel">
+                                <h4>Which Is Better (Global)</h4>
+                                <ol>
+                                    {% for item in component.global_better_order %}
+                                    <li>{{ item }}</li>
+                                    {% endfor %}
+                                </ol>
+                            </article>
+
+                            <article class="mini-panel span-2">
+                                <h4>Which Is Better By Use Case</h4>
+                                <ul class="use-case-list">
+                                    {% for row in component.use_case_better_order %}
+                                    <li>
+                                        <strong>{{ row.use_case }}:</strong> {{ row.recommendation }}
+                                        <span class="muted-inline">({{ row.why }})</span>
+                                    </li>
+                                    {% endfor %}
+                                </ul>
+                            </article>
+                        </div>
+
+                        {% for level_key, level_label in levels %}
+                        <article class="level-panel{% if loop.first %} is-active{% endif %}" data-level-panel="{{ level_key }}">
+                            <h4>{{ level_label }} View</h4>
+                            <ul>
+                                {% for item in component.levels[level_key] %}
+                                <li>{{ item }}</li>
+                                {% endfor %}
+                            </ul>
+                        </article>
+                        {% endfor %}
+
+                        <div class="source-badge-row">
+                            {% for source in component.sources %}
+                            <span class="source-badge" title="{{ source.note }}">{{ source.label }}</span>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </article>
+                {% endfor %}
+            </div>
+        </section>
+
+        <section class="home-grid-2 section-balanced" data-reveal>
+            <article class="card" id="red-flags">
+                <h3>System Balance & Red Flags</h3>
+                <p class="section-summary">Use this section to catch expensive spec traps before you compare final listings.</p>
+                <div class="content-switcher" data-segment-group="red-flags">
+                    <div class="content-switcher-tabs" role="tablist" aria-label="Red flags views">
+                        <button type="button" class="content-switcher-tab is-active" data-segment-btn="essentials" aria-selected="true">Essentials</button>
+                        <button type="button" class="content-switcher-tab" data-segment-btn="mismatch" aria-selected="false">Mismatch Matrix</button>
+                        <button type="button" class="content-switcher-tab" data-segment-btn="interest" aria-selected="false">By Interest</button>
+                    </div>
+
+                    <div class="content-switcher-view is-active" data-segment-view="essentials">
+                        <p class="reality-tip">{{ guide.bottleneck_awareness.principle }}</p>
+                        <h4>High-Risk Red Flags</h4>
+                        <ul class="warning-list">
+                            {% for item in guide.red_flags %}
+                            <li>{{ item }}</li>
+                            {% endfor %}
+                        </ul>
+                        <h4>Frequent Buying Mistakes</h4>
+                        <ul class="warning-list">
+                            {% for item in guide.common_buying_mistakes.mistakes %}
+                            <li>{{ item }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+
+                    <div class="content-switcher-view" data-segment-view="mismatch" hidden>
+                        <h4>Bottleneck Mismatch Matrix</h4>
+                        <div class="table-wrap">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Configuration Mismatch</th>
+                                        <th>Real-World Impact</th>
+                                        <th>Fix</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for row in guide.bottleneck_awareness.mismatch_matrix %}
+                                    <tr>
+                                        <td>{{ row.configuration }}</td>
+                                        <td>{{ row.impact }}</td>
+                                        <td>{{ row.fix }}</td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                        <h4>Diagnostic Signals</h4>
+                        <div class="insight-list">
+                            {% for item in guide.bottleneck_awareness.diagnostic_signals %}
+                            <article class="insight-item">
+                                <p><strong>{{ item.signal }}:</strong> {{ item.likely_cause }}</p>
+                            </article>
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                    <div class="content-switcher-view" data-segment-view="interest" hidden>
+                        <h4>Interest-Based Balance Traps</h4>
+                        <div class="table-wrap">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>User Interest</th>
+                                        <th>Common Trap</th>
+                                        <th>Better Balance</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for row in guide.bottleneck_awareness.interest_balance_traps %}
+                                    <tr>
+                                        <td>{{ row.interest }}</td>
+                                        <td>{{ row.trap }}</td>
+                                        <td>{{ row.better_balance }}</td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card" id="price-strategy">
+                <h3>Smart Buying Strategy</h3>
+                <p class="section-summary">Optimize purchase timing, value score, and checkout hygiene before placing your order.</p>
+                <div class="content-switcher" data-segment-group="price-strategy">
+                    <div class="content-switcher-tabs" role="tablist" aria-label="Smart buying views">
+                        <button type="button" class="content-switcher-tab is-active" data-segment-btn="timing" aria-selected="true">Deal Timing</button>
+                        <button type="button" class="content-switcher-tab" data-segment-btn="value" aria-selected="false">Value Scoring</button>
+                        <button type="button" class="content-switcher-tab" data-segment-btn="execution" aria-selected="false">Checkout</button>
+                    </div>
+
+                    <div class="content-switcher-view is-active" data-segment-view="timing">
+                        <ul class="warning-list">
+                            {% for item in guide.price_intelligence.strategies %}
+                            <li>{{ item }}</li>
+                            {% endfor %}
+                        </ul>
+                        <p class="note">{{ guide.price_intelligence.note }}</p>
+                        <h4>Best Buying Windows</h4>
+                        <div class="table-wrap">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Window</th>
+                                        <th>Best For</th>
+                                        <th>Watch Out</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for row in guide.price_intelligence.buying_windows %}
+                                    <tr>
+                                        <td>{{ row.window }}</td>
+                                        <td>{{ row.best_for }}</td>
+                                        <td>{{ row.watch_out }}</td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="content-switcher-view" data-segment-view="value" hidden>
+                        <h4>Deal Score Framework</h4>
+                        <ol class="strategy-score-list">
+                            {% for item in guide.price_intelligence.deal_score_framework %}
+                            <li>{{ item }}</li>
+                            {% endfor %}
+                        </ol>
+                        <h4>Performance per INR</h4>
+                        <ul class="warning-list">
+                            {% for item in guide.performance_per_inr.points %}
+                            <li>{{ item }}</li>
+                            {% endfor %}
+                        </ul>
+                        <div class="table-wrap">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Budget Band</th>
+                                        <th>Best Value Focus</th>
+                                        <th>Avoid</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for row in guide.performance_per_inr.bands %}
+                                    <tr>
+                                        <td>{{ row.band }}</td>
+                                        <td>{{ row.best_value_focus }}</td>
+                                        <td>{{ row.avoid }}</td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="content-switcher-view" data-segment-view="execution" hidden>
+                        <h4>Checkout Rules</h4>
+                        <ul class="warning-list">
+                            {% for item in guide.price_intelligence.checkout_rules %}
+                            <li>{{ item }}</li>
+                            {% endfor %}
+                        </ul>
+                        <h4>Where To Spend vs Save (By Interest)</h4>
+                        <div class="table-wrap">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Interest</th>
+                                        <th>Where To Spend</th>
+                                        <th>Where To Save</th>
+                                        <th>Value Signal</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for row in guide.interest_value_map %}
+                                    <tr>
+                                        <td>{{ row.interest }}</td>
+                                        <td>{{ row.where_to_spend }}</td>
+                                        <td>{{ row.where_to_save }}</td>
+                                        <td>{{ row.value_signal }}</td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                        <h4>Regional Buying Awareness ({{ guide.regional_buying_awareness.region }})</h4>
+                        <ul class="warning-list">
+                            {% for item in guide.regional_buying_awareness.points %}
+                            <li>{{ item }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <section class="home-grid-2 section-balanced" data-reveal>
+            <article class="card" id="longevity">
+                <h3>3-Year Survival Estimate</h3>
+                <p class="section-summary">Estimate how well each config tier holds up as workloads become heavier over time.</p>
+                <div class="content-switcher" data-segment-group="longevity">
+                    <div class="content-switcher-tabs" role="tablist" aria-label="Longevity views">
+                        <button type="button" class="content-switcher-tab is-active" data-segment-btn="estimate" aria-selected="true">Estimate</button>
+                        <button type="button" class="content-switcher-tab" data-segment-btn="risk" aria-selected="false">Risk & Workload</button>
+                        <button type="button" class="content-switcher-tab" data-segment-btn="upgrade" aria-selected="false">Upgrade Plan</button>
+                    </div>
+
+                    <div class="content-switcher-view is-active" data-segment-view="estimate">
+                        <div class="use-case-grid">
+                            {% for row in guide.longevity_score.tiers %}
+                            <article class="use-case-card longevity-card">
+                                <h4>{{ row.profile }}</h4>
+                                <p><strong>3-year estimate:</strong> {{ row.three_year_estimate }}</p>
+                                <p class="note">{{ row.reason }}</p>
+                            </article>
+                            {% endfor %}
+                        </div>
+                        <p class="reality-tip">{{ guide.longevity_score.note }}</p>
+                    </div>
+
+                    <div class="content-switcher-view" data-segment-view="risk" hidden>
+                        <h4>Workload Survival Matrix (3 Years)</h4>
+                        <div class="table-wrap">
+                            <table class="table-balanced">
+                                <thead>
+                                    <tr>
+                                        <th>Workload</th>
+                                        <th>Entry Tier</th>
+                                        <th>Balanced Tier</th>
+                                        <th>Performance Tier</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for row in guide.longevity_score.workload_survival_matrix %}
+                                    <tr>
+                                        <td>{{ row.workload }}</td>
+                                        <td>{{ row.entry_tier }}</td>
+                                        <td>{{ row.balanced_tier }}</td>
+                                        <td>{{ row.performance_tier }}</td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                        <h4>Longevity Risk Hotspots</h4>
+                        <div class="use-case-grid">
+                            {% for row in guide.longevity_score.risk_hotspots %}
+                            <article class="use-case-card longevity-risk-card">
+                                <h4>{{ row.risk }}</h4>
+                                <p><strong>Impact:</strong> {{ row.impact }}</p>
+                                <p><strong>Prevention:</strong> {{ row.prevention }}</p>
+                            </article>
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                    <div class="content-switcher-view" data-segment-view="upgrade" hidden>
+                        <h4>Upgrade Path Check</h4>
+                        <ul class="warning-list">
+                            {% for item in guide.upgrade_path.checks %}
+                            <li>{{ item }}</li>
+                            {% endfor %}
+                        </ul>
+                        <h4>Upgrade Priority Order</h4>
+                        <ol class="strategy-score-list">
+                            {% for item in guide.upgrade_path.priority_order %}
+                            <li>{{ item }}</li>
+                            {% endfor %}
+                        </ol>
+                        <h4>Upgrade Instead Of Replace</h4>
+                        <ul class="warning-list">
+                            {% for item in guide.upgrade_instead_of_replace.points %}
+                            <li>{{ item }}</li>
+                            {% endfor %}
+                        </ul>
+                        <h4>3-Year Maintenance Timeline</h4>
+                        <div class="timeline-mini">
+                            {% for row in guide.upgrade_instead_of_replace.timeline %}
+                            <article class="timeline-mini-item">
+                                <h4>{{ row.phase }}</h4>
+                                <p>{{ row.focus }}</p>
+                            </article>
+                            {% endfor %}
+                        </div>
+                        <h4>Interest Longevity Playbook</h4>
+                        <div class="table-wrap">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Interest</th>
+                                        <th>Upgrade First</th>
+                                        <th>Watch Trigger</th>
+                                        <th>3-Year Target</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for row in guide.interest_longevity_playbook %}
+                                    <tr>
+                                        <td>{{ row.interest }}</td>
+                                        <td>{{ row.upgrade_first }}</td>
+                                        <td>{{ row.watch_trigger }}</td>
+                                        <td>{{ row.three_year_target }}</td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card" id="matrix">
+                <h3>Performance vs Portability Matrix</h3>
+                <p class="section-summary">Compare laptop classes by daily reality, not just synthetic peak performance.</p>
+                <div class="content-switcher" data-segment-group="matrix">
+                    <div class="content-switcher-tabs" role="tablist" aria-label="Matrix views">
+                        <button type="button" class="content-switcher-tab is-active" data-segment-btn="core" aria-selected="true">Core Tradeoff</button>
+                        <button type="button" class="content-switcher-tab" data-segment-btn="fit" aria-selected="false">Use-Case Fit</button>
+                        <button type="button" class="content-switcher-tab" data-segment-btn="mobility" aria-selected="false">Mobility Reality</button>
+                    </div>
+
+                    <div class="content-switcher-view is-active" data-segment-view="core">
+                        <h4>Core Tradeoff Matrix</h4>
+                        <div class="table-wrap">
+                            <table class="table-balanced">
+                                <thead>
+                                    <tr>
+                                        <th>Category</th>
+                                        <th>Thin & Light</th>
+                                        <th>Balanced</th>
+                                        <th>Gaming</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for row in guide.performance_portability_matrix %}
+                                    <tr>
+                                        <td>{{ row.category }}</td>
+                                        <td>{{ row.thin_light }}</td>
+                                        <td>{{ row.balanced }}</td>
+                                        <td>{{ row.gaming }}</td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                        <p class="reality-tip">{{ guide.matrix_takeaway }}</p>
+                        <div class="evidence-callout-row">
+                            <article class="evidence-callout">
+                                <h4>Balanced Wins Mixed Use</h4>
+                                <p>Balanced class is usually the safest default when you need both mobility and sustained output.</p>
+                            </article>
+                            <article class="evidence-callout">
+                                <h4>Thin Class Is Contextual</h4>
+                                <p>Thin-and-light excels when commute and unplugged usage matter more than heavy continuous load.</p>
+                            </article>
+                        </div>
+                    </div>
+
+                    <div class="content-switcher-view" data-segment-view="fit" hidden>
+                        <h4>Use-Case Fit Matrix</h4>
+                        <div class="table-wrap">
+                            <table class="table-balanced">
+                                <thead>
+                                    <tr>
+                                        <th>Workload</th>
+                                        <th>Thin & Light</th>
+                                        <th>Balanced</th>
+                                        <th>Gaming</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for row in guide.use_case_fit_matrix %}
+                                    <tr>
+                                        <td>{{ row.use_case }}</td>
+                                        <td>{{ row.thin_light }}</td>
+                                        <td>{{ row.balanced }}</td>
+                                        <td>{{ row.gaming }}</td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                        <p class="note">Choose this view when matching laptop class to your primary workload, not just specs.</p>
+                    </div>
+
+                    <div class="content-switcher-view" data-segment-view="mobility" hidden>
+                        <h4>Mobility Reality Matrix</h4>
+                        <div class="table-wrap">
+                            <table class="table-balanced">
+                                <thead>
+                                    <tr>
+                                        <th>Daily Reality Factor</th>
+                                        <th>Thin & Light</th>
+                                        <th>Balanced</th>
+                                        <th>Gaming</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for row in guide.mobility_reality_matrix %}
+                                    <tr>
+                                        <td>{{ row.factor }}</td>
+                                        <td>{{ row.thin_light }}</td>
+                                        <td>{{ row.balanced }}</td>
+                                        <td>{{ row.gaming }}</td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                        <p class="note">Use this view if your day includes classes, meetings, travel, and unplugged sessions.</p>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <section class="home-grid-2 section-balanced" data-reveal>
+            <article class="card" id="future-tech">
+                <h3>2026 Readiness</h3>
+                <p class="section-summary">Check future compatibility signals so your laptop choice stays relevant longer.</p>
+                <ul class="warning-list">
+                    {% for item in guide.ai_future_tech.points %}
+                    <li>{{ item }}</li>
+                    {% endfor %}
+                    {% for item in guide.architecture_compatibility.points %}
+                    <li>{{ item }}</li>
+                    {% endfor %}
+                </ul>
+            </article>
+
+            <article class="card" id="confidence-meter">
+                <h3>Decision Confidence Meter</h3>
+                <p class="section-summary">Complete at least 4 checks before finalizing any purchase shortlist.</p>
+                <div class="confidence-meter">
+                    {% for item in guide.confidence_check.checks %}
+                    <label class="confidence-item">
+                        <input type="checkbox" data-confidence-box>
+                        <span>{{ item }}</span>
+                    </label>
+                    {% endfor %}
+                </div>
+                <p class="reality-tip" data-confidence-output>
+                    Check 4 or more items to enter Safe Purchase Zone.
+                </p>
+            </article>
+        </section>
+
+        <section class="card" id="final-checklist" data-reveal>
+            <h3>Final Checklist</h3>
+            <p class="section-summary">Use this as the final gate before payment so no critical verification is skipped.</p>
+            <div class="final-checklist">
+                {% for item in guide.final_checklist %}
+                <label class="final-check-item">
+                    <input type="checkbox" data-final-box>
+                    <span>{{ item }}</span>
+                </label>
+                {% endfor %}
+            </div>
+            <p class="reality-tip" data-final-output>Complete all final checks before payment.</p>
+        </section>
+    </div>
+</div>
+</div>
+{% endblock %}

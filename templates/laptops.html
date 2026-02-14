@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}Laptop Guide | Laptop Finder{% endblock %}
+
+{% block content %}
+<section class="card">
+    <h2>Dynamic Laptop Examples</h2>
+    <p>Filter by use case and budget. Data loads from <code>/api/laptops</code>.</p>
+</section>
+
+<section class="card filter-row">
+    <label for="useCase">Use Case</label>
+    <select id="useCase">
+        <option value="all">All</option>
+        <option value="gaming">Gaming</option>
+        <option value="coding">Coding</option>
+        <option value="editing">Editing</option>
+        <option value="student">Student</option>
+        <option value="professional">Professional</option>
+    </select>
+
+    <label for="maxPrice">Max Price (USD)</label>
+    <input id="maxPrice" type="number" min="500" step="50" placeholder="Any">
+
+    <button id="applyFilters" class="btn" type="button">Apply</button>
+</section>
+
+<section id="laptopGrid" class="grid-3"></section>
+{% endblock %}

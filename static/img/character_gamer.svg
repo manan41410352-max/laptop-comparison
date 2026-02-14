@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="Gamer character">
+  <defs>
+    <linearGradient id="bgG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d1fae5"/>
+      <stop offset="100%" stop-color="#99f6e4"/>
+    </linearGradient>
+  </defs>
+  <circle cx="120" cy="120" r="108" fill="url(#bgG)"/>
+  <ellipse cx="120" cy="192" rx="58" ry="26" fill="#0f766e" opacity="0.28"/>
+  <path d="M76 168c8-24 25-35 44-35s36 11 44 35v18H76v-18z" fill="#0f766e"/>
+  <circle cx="120" cy="100" r="35" fill="#f6c7a6"/>
+  <path d="M84 97c2-25 17-39 36-39 22 0 37 16 38 39-7-6-15-9-23-9h-29c-9 0-16 3-22 9z" fill="#065f46"/>
+  <rect x="92" y="102" width="56" height="16" rx="8" fill="#0f172a"/>
+  <rect x="98" y="105" width="20" height="10" rx="5" fill="#22d3ee"/>
+  <rect x="122" y="105" width="20" height="10" rx="5" fill="#60a5fa"/>
+  <circle cx="107" cy="110" r="2" fill="#0f172a"/>
+  <circle cx="133" cy="110" r="2" fill="#0f172a"/>
+  <path d="M111 122c3 3 15 3 18 0" fill="none" stroke="#92400e" stroke-width="2" stroke-linecap="round"/>
+</svg>

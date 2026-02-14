@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}Laptop Guide | Benchmarks{% endblock %}
+
+{% block content %}
+<section class="card">
+    <h2>Benchmark Comparison</h2>
+    <p>This page is chart-ready. If you include Chart.js, graphs will render automatically from `/api/benchmarks`.</p>
+</section>
+
+<section class="grid-2">
+    <article class="card">
+        <h3>CPU Scores (Sample Data)</h3>
+        <canvas id="cpuChart" height="180"></canvas>
+        <div id="cpuFallback" class="fallback"></div>
+    </article>
+    <article class="card">
+        <h3>GPU Scores (Sample Data)</h3>
+        <canvas id="gpuChart" height="180"></canvas>
+        <div id="gpuFallback" class="fallback"></div>
+    </article>
+</section>
+
+<section class="card">
+    <h3>API Endpoint</h3>
+    <p><code>/api/benchmarks</code> returns JSON in this format:</p>
+    <pre>{
+  "cpu": [{"name": "Ryzen 7 7840HS", "score": 28000}],
+  "gpu": [{"name": "RTX 4060 Laptop", "score": 15000}]
+}</pre>
+</section>
+{% endblock %}

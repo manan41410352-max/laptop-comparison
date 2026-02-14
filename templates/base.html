@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Laptop Guide{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="scroll-progress" aria-hidden="true">
+        <span data-scroll-progress-bar></span>
+    </div>
+
+    <header class="site-header">
+        <div class="container nav-wrap">
+            <h1 class="logo">Laptop Comparison Hub</h1>
+            <nav>
+                <a href="{{ url_for('home') }}">Home</a>
+                <a href="{{ url_for('benchmarks') }}">Benchmarks</a>
+                <a href="{{ url_for('laptops') }}">Laptop Finder</a>
+                <button id="themeToggle" class="btn" type="button">Toggle Theme</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        {% block content %}{% endblock %}
+    </main>
+
+    <button id="backToTop" class="back-to-top" type="button" aria-label="Back to top">Top</button>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    {% block scripts %}{% endblock %}
+</body>
+</html>
