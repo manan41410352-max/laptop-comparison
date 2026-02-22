@@ -1,0 +1,462 @@
+{% extends "base.html" %}
+
+{% block title %}
+{% if product %}Laptop Guide | {{ product.brand }} {{ product.model }}{% else %}Laptop Guide | Product Not Found{% endif %}
+{% endblock %}
+
+{% block content %}
+{% if product %}
+<section class="card product-hero">
+    <div class="product-hero-layout">
+        <div class="product-hero-copy">
+            <p class="hero-kicker">{{ product.region }} | {{ product.brand }} {{ product.series }}</p>
+            <h2>{{ product.model }}</h2>
+            <p class="laptop-meta">SKU: {{ product.sku }} | Region: {{ product.region }} | Rating: {{ "%.1f"|format(product.rating) }}</p>
+            <p class="product-price">₹{{ "{:,.0f}".format(product.price) }}</p>
+            <p class="note">
+                Official product page:
+                <a href="{{ product.product_url }}" target="_blank" rel="noopener noreferrer">{{ product.product_url }}</a>
+            </p>
+            <div class="hero-cta-row">
+                {% if product.customization_available %}
+                <a class="btn" href="#configuration">Customize On This Site</a>
+                {% endif %}
+                {% for buy_link in product.buy_links %}
+                {% set buy_url = buy_link.url or "#" %}
+                {% set is_internal = buy_url.startswith("#") %}
+                {% if not is_internal %}
+                <a
+                    class="btn secondary"
+                    href="{{ buy_url }}"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >{{ buy_link.label }}</a>
+                {% endif %}
+                {% endfor %}
+                <a class="btn secondary" href="{{ url_for('laptops') }}">Back To Finder</a>
+            </div>
+        </div>
+        <div class="product-hero-media">
+            <img
+                src="{{ product.image_url or url_for('static', filename='images/laptop-placeholder.svg') }}"
+                alt="{{ product.brand }} {{ product.model }}"
+                loading="lazy"
+                onerror="this.onerror=null;this.src='{{ url_for('static', filename='images/laptop-placeholder.svg') }}';"
+            >
+        </div>
+    </div>
+</section>
+
+{% with flashes = get_flashed_messages(with_categories=true) %}
+{% if flashes %}
+<section class="flash-stack">
+    {% for category, message in flashes %}
+    <article class="card flash-card flash-{{ category }}">
+        <p>{{ message }}</p>
+    </article>
+    {% endfor %}
+</section>
+{% endif %}
+{% endwith %}
+
+<nav class="card product-section-nav" aria-label="Product section shortcuts">
+    <a class="btn secondary" href="#specs">Specs</a>
+    {% if product.specs.configuration and product.specs.configuration.categories %}
+    <a class="btn secondary" href="#configuration">Configuration</a>
+    {% endif %}
+    <a class="btn secondary" href="#benchmarks">Benchmarks</a>
+    <a class="btn secondary" href="#reviews">Reviews</a>
+    <a class="btn secondary" href="#review-form">Write Review</a>
+</nav>
+
+<section class="card" id="specs">
+    <h3>Specs</h3>
+    <div class="table-wrap">
+        <table>
+            <tbody>
+                <tr><td>Brand</td><td>{{ product.brand }}</td></tr>
+                <tr><td>Series</td><td>{{ product.series }}</td></tr>
+                <tr><td>Model</td><td>{{ product.model }}</td></tr>
+                <tr><td>SKU</td><td>{{ product.sku }}</td></tr>
+                <tr><td>CPU</td><td>{{ product.cpu_model }}</td></tr>
+                <tr><td>GPU</td><td>{{ product.gpu_model }} ({{ product.gpu_type }})</td></tr>
+                <tr><td>RAM</td><td>{{ product.ram_gb }}GB</td></tr>
+                <tr><td>Storage</td><td>{{ product.storage_gb }}GB {{ product.storage_type }}</td></tr>
+                <tr><td>Display</td><td>{{ product.screen_size }}" {{ product.resolution }} {{ product.refresh_hz }}Hz {{ product.panel }}</td></tr>
+                <tr><td>Weight</td><td>{{ "%.2f"|format(product.weight_kg) }}kg</td></tr>
+                <tr>
+                    <td>Battery</td>
+                    <td>
+                        {% if product.battery_capacity_wh %}{{ product.battery_capacity_wh }} Wh{% else %}NA{% endif %}
+                        {% if product.battery_type_display %} ({{ product.battery_type_display }}){% elif product.battery_type %} ({{ product.battery_type }}){% endif %}
+                        {% if product.battery_hours %}<br><span class="note">Typical runtime: {{ "%.1f"|format(product.battery_hours) }}h</span>{% endif %}
+                    </td>
+                </tr>
+                <tr><td>Ports</td><td>{{ product.ports|join(", ") }}</td></tr>
+                <tr><td>100% sRGB</td><td>{{ "Yes" if product.srgb_100 else "No" }}</td></tr>
+                <tr><td>DCI-P3</td><td>{{ "Yes" if product.dci_p3 else "No" }}</td></tr>
+                <tr><td>RAM Upgradable</td><td>{{ "Yes" if product.ram_upgradable else "No" }}</td></tr>
+                <tr><td>Extra SSD Slot</td><td>{{ "Yes" if product.extra_ssd_slot else "No" }}</td></tr>
+                <tr><td>Backlit Keyboard</td><td>{{ "Yes" if product.backlit_keyboard else "No" }}</td></tr>
+                <tr><td>Warranty</td><td>{{ product.specs.warranty }}</td></tr>
+                {% if product.specs.customization_options %}
+                <tr>
+                    <td>Customization</td>
+                    <td>
+                        <ul class="spec-bullet-list">
+                            {% for option in product.specs.customization_options %}
+                            <li>{{ option }}</li>
+                            {% endfor %}
+                        </ul>
+                        {% if product.customization_available %}
+                        <p class="note">Use the native Configuration section below to customize on this site.</p>
+                        {% endif %}
+                    </td>
+                </tr>
+                {% endif %}
+                <tr><td>Notes</td><td>{{ product.specs.notes }}</td></tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+{% if product.specs.configuration and product.specs.configuration.categories %}
+<section class="card native-config-card" id="configuration" aria-labelledby="configurationTitle">
+    <div class="native-config-head">
+        <div>
+            <h3 id="configurationTitle">{{ product.specs.configuration.title or "Configuration" }}</h3>
+            {% if product.specs.configuration.collapse_hint %}
+            <p class="note">{{ product.specs.configuration.collapse_hint }}</p>
+            {% endif %}
+            {% if product.specs.configuration.warranty_note %}
+            <p class="note">{{ product.specs.configuration.warranty_note }}</p>
+            {% endif %}
+        </div>
+        <a class="btn secondary native-config-jump" href="#nativeConfigSummary">Jump To Summary</a>
+    </div>
+
+    <div class="native-config-layout">
+        <form id="nativeConfigForm" class="native-config-form" data-base-price="{{ product.price }}">
+            <div class="config-category-list">
+                {% for category in product.specs.configuration.categories %}
+                <details class="config-category" open>
+                    <summary>
+                        <span>{{ category.name }}</span>
+                        <span class="note">{{ category.options|length }} options</span>
+                    </summary>
+                    <fieldset class="config-option-list" role="radiogroup" aria-label="{{ category.name }} options">
+                        <legend class="sr-only">{{ category.name }} options</legend>
+                        {% for option in category.options %}
+                        {% set option_id = "cfg-" ~ category.key ~ "-" ~ loop.index0 %}
+                        {% set details_id = option_id ~ "-details" %}
+                        {% set price_id = option_id ~ "-price" %}
+                        <label class="config-option{% if option.included %} is-included{% endif %}" for="{{ option_id }}">
+                            <span class="config-option-control">
+                                <input
+                                    id="{{ option_id }}"
+                                    class="config-option-input"
+                                    type="radio"
+                                    name="{{ category.key }}"
+                                    value="{{ loop.index0 }}"
+                                    data-price-delta="{{ option.price_delta or 0 }}"
+                                    data-category-label="{{ category.name }}"
+                                    data-option-label="{{ option.name }}"
+                                    data-default-checked="{% if loop.index0 == category.selected_option_index %}1{% else %}0{% endif %}"
+                                    aria-describedby="{{ details_id }} {{ price_id }}"
+                                    {% if loop.index0 == category.selected_option_index %}checked{% endif %}
+                                >
+                            </span>
+                            <span class="config-option-content">
+                                <span class="config-option-title">{{ option.name }}</span>
+                                {% if option.details %}
+                                <span class="note" id="{{ details_id }}">{{ option.details }}</span>
+                                {% else %}
+                                <span class="note sr-only" id="{{ details_id }}">No extra details provided for this option.</span>
+                                {% endif %}
+                                <span class="config-option-footer">
+                                    {% if option.included %}
+                                    <span class="config-price" id="{{ price_id }}">Included</span>
+                                    {% elif option.price_note %}
+                                    <span class="config-price" id="{{ price_id }}">{{ option.price_note }}</span>
+                                    {% else %}
+                                    <span class="config-price" id="{{ price_id }}">Included in estimate</span>
+                                    {% endif %}
+                                    {% if option.alt_price_note %}
+                                    <span class="note">{{ option.alt_price_note }}</span>
+                                    {% endif %}
+                                </span>
+                            </span>
+                        </label>
+                        {% endfor %}
+                    </fieldset>
+                </details>
+                {% endfor %}
+            </div>
+        </form>
+
+        <aside class="native-config-summary" id="nativeConfigSummary" aria-live="polite" aria-atomic="false">
+            <p class="native-config-summary-title">Configuration Sidebar</p>
+            <p class="note"><strong>Native configurator:</strong> choose options below. No redirect required.</p>
+            <div class="native-config-price-grid">
+                <article class="native-config-price-block">
+                    <p class="note">Base Price</p>
+                    <p class="native-config-base-price">₹{{ "{:,.0f}".format(product.price) }}</p>
+                </article>
+                <article class="native-config-price-block">
+                    <p class="note">Current Price</p>
+                    <p class="product-price native-config-price" id="nativeConfigPrice">₹{{ "{:,.0f}".format(product.price) }}</p>
+                </article>
+            </div>
+            <p class="note native-config-delta" id="nativeConfigDelta">Base configuration selected</p>
+            <p class="note native-config-count" id="nativeConfigCount">{{ product.specs.configuration.categories|length }} categories selected</p>
+            <button class="btn secondary native-config-reset" id="nativeConfigReset" type="button">Reset To Base</button>
+            <hr class="native-config-divider">
+            <p class="note native-config-list-label">Base configuration</p>
+            <ul class="spec-bullet-list native-config-static-list">
+                {% for category in product.specs.configuration.categories %}
+                {% set base_idx = category.selected_option_index if category.selected_option_index is not none else 0 %}
+                {% if base_idx < category.options|length %}
+                {% set base_option = category.options[base_idx] %}
+                <li class="native-config-selection-item">
+                    <span>{{ category.name }}: {{ base_option.name }}</span>
+                    <span class="native-config-selection-delta">Base</span>
+                </li>
+                {% endif %}
+                {% endfor %}
+            </ul>
+            <p class="note native-config-list-label">Current selections</p>
+            <ul id="nativeConfigSelections" class="spec-bullet-list"></ul>
+        </aside>
+    </div>
+    <p class="note">Estimated totals are for guidance. Final pricing and availability may vary.</p>
+</section>
+{% endif %}
+
+<section class="card" id="benchmarks">
+    <h3>Benchmarks</h3>
+    <p class="note">Placeholder benchmark data. Actual FPS and scores can vary by exact SKU, GPU power limits (TGP), BIOS mode, thermals, game patch, and driver version.</p>
+    <h4>Game FPS</h4>
+    <div class="table-wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th>Game</th>
+                    <th>Preset</th>
+                    <th>1080p FPS</th>
+                    <th>1440p FPS</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for game in product.benchmarks.games %}
+                <tr>
+                    <td>{{ game.title }}</td>
+                    <td>{{ game.preset }}</td>
+                    <td>{{ game.fps_1080p }}</td>
+                    <td>{{ game.fps_1440p }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <h4>Synthetic Scores</h4>
+    <div class="table-wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th>Test</th>
+                    <th>Score</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for bench in product.benchmarks.synthetic %}
+                <tr>
+                    <td>{{ bench.name }}</td>
+                    <td>{{ bench.score }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<section class="card" id="reviews">
+    <h3>User Reviews</h3>
+    <p class="note">Showing newest first. Moderation filter: approved reviews only.</p>
+    {% if reviews %}
+    <div class="review-list">
+        {% for review in reviews %}
+        <article class="review-item">
+            <div class="review-head">
+                <strong>{{ review.name }}</strong>
+                <span>{{ "★" * review.rating }}{{ "☆" * (5 - review.rating) }}</span>
+            </div>
+            <p class="note">{{ review.created_at }}</p>
+            <p>{{ review.experience }}</p>
+            <div class="review-grid">
+                <div>
+                    <p><strong>Pros</strong></p>
+                    <ul>
+                        {% for point in review.pros_points %}
+                        <li>{{ point }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div>
+                    <p><strong>Cons</strong></p>
+                    <ul>
+                        {% for point in review.cons_points %}
+                        <li>{{ point }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </article>
+        {% endfor %}
+    </div>
+    {% else %}
+    <p class="note">No approved reviews yet. Be the first to add one.</p>
+    {% endif %}
+</section>
+
+<section class="card" id="review-form">
+    <h3>Write A Review</h3>
+    <form method="post" action="{{ url_for('product_review', product_id=product.id) }}" class="product-review-form">
+        <label class="finder-field">
+            Name
+            <input type="text" name="name" maxlength="80" placeholder="Your name" required>
+        </label>
+        <label class="finder-field">
+            Rating
+            <select name="rating" required>
+                <option value="">Select rating</option>
+                {% for value in [5, 4, 3, 2, 1] %}
+                <option value="{{ value }}">{{ value }} / 5</option>
+                {% endfor %}
+            </select>
+        </label>
+        <label class="finder-field">
+            Pros (one per line or comma separated)
+            <textarea name="pros" rows="4" placeholder="Thermals are stable&#10;Great display" required></textarea>
+        </label>
+        <label class="finder-field">
+            Cons (one per line or comma separated)
+            <textarea name="cons" rows="4" placeholder="Heavy for daily travel&#10;Fan noise under full load" required></textarea>
+        </label>
+        <label class="finder-field">
+            Overall experience
+            <textarea name="experience" rows="5" placeholder="Share your real usage: gaming, temperatures, battery, build quality..." required></textarea>
+        </label>
+        <button class="btn" type="submit">Submit Review</button>
+    </form>
+</section>
+{% else %}
+<article class="card">
+    <h2>Product Not Found</h2>
+    <p class="note">Product ID {{ product_id }} is not available in the HP India catalog.</p>
+    <a class="btn" href="{{ url_for('laptops') }}">Back To Finder</a>
+</article>
+{% endif %}
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+{% if product and product.specs.configuration and product.specs.configuration.categories %}
+<script>
+(() => {
+    const form = document.getElementById("nativeConfigForm");
+    const priceEl = document.getElementById("nativeConfigPrice");
+    const deltaEl = document.getElementById("nativeConfigDelta");
+    const countEl = document.getElementById("nativeConfigCount");
+    const selectionsEl = document.getElementById("nativeConfigSelections");
+    const resetBtn = document.getElementById("nativeConfigReset");
+    if (!form || !priceEl || !deltaEl || !countEl || !selectionsEl) return;
+
+    const basePrice = Number(form.dataset.basePrice || 0);
+    const allInputs = Array.from(form.querySelectorAll("input.config-option-input"));
+
+    const formatInr = (value) => "₹" + Math.round(value).toLocaleString("en-IN");
+
+    const updateCardSelectionState = () => {
+        allInputs.forEach((entry) => {
+            const card = entry.closest(".config-option");
+            if (!card) return;
+            card.classList.toggle("is-selected", entry.checked);
+        });
+    };
+
+    const updateSummary = () => {
+        let totalDelta = 0;
+        const selected = form.querySelectorAll("input.config-option-input:checked");
+        const rows = [];
+
+        selected.forEach((input) => {
+            const delta = Number(input.dataset.priceDelta || 0);
+            if (!Number.isNaN(delta)) totalDelta += delta;
+
+            const category = input.dataset.categoryLabel || "";
+            const option = input.dataset.optionLabel || "";
+            if (category && option) {
+                let deltaLabel = "Included";
+                if (delta > 0) deltaLabel = `+${formatInr(delta)}`;
+                if (delta < 0) deltaLabel = `-${formatInr(Math.abs(delta))}`;
+                rows.push({
+                    label: `${category}: ${option}`,
+                    delta: deltaLabel,
+                });
+            }
+        });
+
+        const estimated = basePrice + totalDelta;
+        priceEl.textContent = formatInr(estimated);
+        if (totalDelta > 0) {
+            deltaEl.textContent = `Estimated change: +${formatInr(totalDelta)}`;
+        } else if (totalDelta < 0) {
+            deltaEl.textContent = `Estimated change: -${formatInr(Math.abs(totalDelta))}`;
+        } else {
+            deltaEl.textContent = "Base configuration selected";
+        }
+        countEl.textContent = `${selected.length} categories selected`;
+
+        updateCardSelectionState();
+
+        selectionsEl.innerHTML = "";
+        rows.forEach((entry) => {
+            const li = document.createElement("li");
+            li.className = "native-config-selection-item";
+
+            const text = document.createElement("span");
+            text.textContent = entry.label;
+
+            const delta = document.createElement("span");
+            delta.className = "native-config-selection-delta";
+            delta.textContent = entry.delta;
+
+            li.appendChild(text);
+            li.appendChild(delta);
+            selectionsEl.appendChild(li);
+        });
+    };
+
+    const resetToDefault = () => {
+        allInputs.forEach((input) => {
+            if (input.dataset.defaultChecked === "1") {
+                input.checked = true;
+            }
+        });
+        updateSummary();
+        const firstSelected = form.querySelector("input.config-option-input:checked");
+        if (firstSelected) firstSelected.focus();
+    };
+
+    form.addEventListener("change", (event) => {
+        if (event.target.matches("input.config-option-input")) {
+            updateSummary();
+        }
+    });
+    if (resetBtn) resetBtn.addEventListener("click", resetToDefault);
+
+    updateSummary();
+})();
+</script>
+{% endif %}
+{% endblock %}

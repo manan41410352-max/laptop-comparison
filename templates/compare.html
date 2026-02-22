@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block title %}Laptop Guide | Compare{% endblock %}
+
+{% block content %}
+<article class="card">
+    <h2>Compare Laptops (Stub)</h2>
+    <p class="note">Selected IDs: {% if selected_ids %}{{ selected_ids|join(", ") }}{% else %}none{% endif %}</p>
+    <p class="note">This route is wired for up to 4 selections from Finder.</p>
+    <a class="btn secondary" href="{{ url_for('laptops') }}">Back To Finder</a>
+</article>
+
+{% if laptops %}
+<section class="finder-results-grid compare-results-grid">
+    {% for laptop in laptops %}
+    <article class="card laptop-card finder-laptop-card compare-laptop-card">
+        <div class="finder-thumb compare-thumb">
+            <img
+                src="{{ laptop.image_url or url_for('static', filename='images/laptop-placeholder.svg') }}"
+                alt="{{ laptop.brand }} {{ laptop.model }}"
+                loading="lazy"
+                onerror="this.onerror=null;this.src='{{ url_for('static', filename='images/laptop-placeholder.svg') }}';"
+            >
+        </div>
+        <h3>{{ laptop.brand }} {{ laptop.model }}</h3>
+        <p class="laptop-meta">{{ laptop.series }} | ₹{{ "{:,.0f}".format(laptop.price) }} | Rating {{ "%.1f"|format(laptop.rating) }}</p>
+        <p><strong>SKU:</strong> {{ laptop.sku }}</p>
+        <p><strong>CPU:</strong> {{ laptop.cpu_model }}</p>
+        <p><strong>GPU:</strong> {{ laptop.gpu_model }} ({{ laptop.gpu_type }})</p>
+        <p><strong>RAM:</strong> {{ laptop.ram_gb }}GB</p>
+        <p><strong>Storage:</strong> {{ laptop.storage_gb }}GB {{ laptop.storage_type }}</p>
+        <p><strong>Display:</strong> {{ laptop.screen_size }}" {{ laptop.resolution }} {{ laptop.refresh_hz }}Hz {{ laptop.panel }}</p>
+        <p>
+            <strong>Weight:</strong> {{ "%.2f"|format(laptop.weight_kg) }}kg |
+            <strong>Battery:</strong>
+            {% if laptop.battery_capacity_wh %}{{ laptop.battery_capacity_wh }} Wh{% else %}NA{% endif %}
+            {% if laptop.battery_hours %} ({{ "%.1f"|format(laptop.battery_hours) }}h typical){% endif %}
+        </p>
+        <p><a href="{{ url_for('product_detail', product_id=laptop.id) }}">Open product page</a></p>
+    </article>
+    {% endfor %}
+</section>
+{% else %}
+<article class="card">
+    <h3>No laptops selected</h3>
+    <p class="note">Use the compare checkboxes in Finder to add up to 4 laptops.</p>
+</article>
+{% endif %}
+{% endblock %}

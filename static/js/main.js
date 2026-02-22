@@ -969,7 +969,15 @@ async function initLaptopFilters() {
         }
 
         const response = await fetch(`/api/laptops?${params.toString()}`);
-        const laptops = await response.json();
+        const payload = await response.json();
+
+        if (!response.ok) {
+            const message = payload && payload.error ? payload.error : "Unable to load laptops.";
+            grid.innerHTML = `<article class="card">${message}</article>`;
+            return;
+        }
+
+        const laptops = Array.isArray(payload) ? payload : [];
 
         if (!laptops.length) {
             grid.innerHTML = '<article class="card">No laptops match this filter.</article>';
@@ -980,8 +988,11 @@ async function initLaptopFilters() {
             .map(
                 (laptop) => `
                 <article class="card laptop-card">
+                    <div class="finder-thumb">
+                        <img src="${laptop.image_url || "/static/images/laptop-placeholder.svg"}" alt="${laptop.name}" loading="lazy" onerror="this.onerror=null;this.src='/static/images/laptop-placeholder.svg';">
+                    </div>
                     <h3>${laptop.name}</h3>
-                    <p class="laptop-meta">${laptop.brand} | $${laptop.price_usd}</p>
+                    <p class="laptop-meta">${laptop.brand} | ₹${Number(laptop.price_usd || 0).toLocaleString("en-IN")}</p>
                     <p><strong>CPU:</strong> ${laptop.cpu}</p>
                     <p><strong>GPU:</strong> ${laptop.gpu}</p>
                     <p><strong>RAM:</strong> ${laptop.ram_gb}GB | <strong>Storage:</strong> ${laptop.storage}</p>

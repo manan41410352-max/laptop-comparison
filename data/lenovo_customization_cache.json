@@ -1,0 +1,3224 @@
+{
+  "https://www.lenovo.com/in/en/p/laptops/loq-laptops/lenovo-loq-15iax9/83gs00lfin": {
+    "version": 2,
+    "fetched_at": 1771782944,
+    "data": {
+      "customization_available": true,
+      "customization_options": [
+        "Display: 2 official options",
+        "Warranty & Protection: 2 official options"
+      ],
+      "configuration": {
+        "title": "Configuration",
+        "collapse_hint": "Official Lenovo options",
+        "warranty_note": "Options synced from official Lenovo India variant listings. Price differences are estimated from listed variant pricing and may vary at checkout.",
+        "categories": [
+          {
+            "name": "Processor",
+            "options": [
+              {
+                "name": "12th Generation Intel\u00ae Core\u2122 i5-12450HX Processor (E-cores up to 3.10 GHz P-cores up to 4.40 GHz)",
+                "details": "Official variant SKU: OFFICIAL, 83GS00PJIN",
+                "price_note": "-\u20b95,749",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Operating System",
+            "options": [
+              {
+                "name": "Windows 11 Home Single Language 64",
+                "details": "Official variant SKU: OFFICIAL, 83GS00PJIN",
+                "price_note": "-\u20b95,749",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Graphics Card",
+            "options": [
+              {
+                "name": "NVIDIA\u00ae GeForce RTX\u2122 3050 Laptop GPU 6GB GDDR6",
+                "details": "Official variant SKU: OFFICIAL, 83GS00PJIN",
+                "price_note": "-\u20b95,749",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Memory",
+            "options": [
+              {
+                "name": "16 GB DDR5-4800MT/s (SODIMM)(2 x 8 GB)",
+                "details": "Official variant SKU: OFFICIAL, 83GS00PJIN",
+                "price_note": "-\u20b95,749",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Storage",
+            "options": [
+              {
+                "name": "512 GB SSD M.2 2242 PCIe Gen4 QLC",
+                "details": "Official variant SKU: OFFICIAL, 83GS00PJIN",
+                "price_note": "-\u20b95,749",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Display",
+            "options": [
+              {
+                "name": "1920 x 1080",
+                "details": "Official variant SKU: OFFICIAL, 83GS00PJIN",
+                "price_note": "-\u20b95,749",
+                "alt_price_note": "",
+                "included": true
+              },
+              {
+                "name": "39.62cms (15.6) FHD (1920 x 1080), IPS, Anti-Glare, Non-Touch, 100%sRGB, 300 nits, 144 Hz",
+                "details": "Official variant SKU: OFFICIAL, 83GS00PJIN",
+                "price_note": "-\u20b95,749",
+                "alt_price_note": "",
+                "included": false
+              }
+            ]
+          },
+          {
+            "name": "Keyboard",
+            "options": [
+              {
+                "name": "White Backlit, Eclipse Black - English (US)",
+                "details": "Official variant SKU: OFFICIAL, 83GS00PJIN",
+                "price_note": "-\u20b95,749",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Warranty & Protection",
+            "options": [
+              {
+                "name": "1 Year On-site",
+                "details": "Official variant SKU: OFFICIAL, 83GS00PJIN",
+                "price_note": "-\u20b95,749",
+                "alt_price_note": "",
+                "included": true
+              },
+              {
+                "name": "1YR Accidental Damage Protection",
+                "details": "Official variant SKU: OFFICIAL, 83GS00PJIN",
+                "price_note": "-\u20b95,749",
+                "alt_price_note": "",
+                "included": false
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "https://www.lenovo.com/in/en/p/laptops/loq-laptops/lenovo-loq-15irx9/83dv00xhin": {
+    "version": 2,
+    "fetched_at": 1771782946,
+    "data": {
+      "customization_available": true,
+      "customization_options": [
+        "Processor: 2 official options",
+        "Graphics Card: 2 official options",
+        "Storage: 2 official options",
+        "Display: 2 official options",
+        "Warranty & Protection: 2 official options"
+      ],
+      "configuration": {
+        "title": "Configuration",
+        "collapse_hint": "Official Lenovo options",
+        "warranty_note": "Options synced from official Lenovo India variant listings. Price differences are estimated from listed variant pricing and may vary at checkout.",
+        "categories": [
+          {
+            "name": "Processor",
+            "options": [
+              {
+                "name": "13th Generation Intel\u00ae Core\u2122 i5-13450HX Processor (E-cores up to 3.40 GHz P-cores up to 4.60 GHz)",
+                "details": "Official variant SKU: OFFICIAL, 83DV018JIN (+1 more)",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              },
+              {
+                "name": "13th Generation Intel\u00ae Core\u2122 i7-13650HX Processor (E-cores up to 3.60 GHz P-cores up to 4.90 GHz)",
+                "details": "Official variant SKU: OFFICIAL, 83DV01A5IN",
+                "price_note": "+\u20b917,499",
+                "alt_price_note": "",
+                "included": false
+              }
+            ]
+          },
+          {
+            "name": "Operating System",
+            "options": [
+              {
+                "name": "Windows 11 Home Single Language 64",
+                "details": "Official variant SKU: OFFICIAL, 83DV01A5IN (+1 more)",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Graphics Card",
+            "options": [
+              {
+                "name": "NVIDIA\u00ae GeForce RTX\u2122 3050 Laptop GPU 6GB GDDR6",
+                "details": "Official variant SKU: OFFICIAL, 83DV018NIN (+1 more)",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              },
+              {
+                "name": "NVIDIA\u00ae GeForce RTX\u2122 4050 Laptop GPU 6GB GDDR6",
+                "details": "Official variant SKU: OFFICIAL, 83DV01A5IN (+1 more)",
+                "price_note": "+\u20b94,999",
+                "alt_price_note": "",
+                "included": false
+              }
+            ]
+          },
+          {
+            "name": "Memory",
+            "options": [
+              {
+                "name": "16 GB DDR5-4800MT/s (SODIMM)",
+                "details": "Official variant SKU: OFFICIAL, 83DV01A5IN (+1 more)",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Storage",
+            "options": [
+              {
+                "name": "1 TB SSD M.2 2242 PCIe Gen4 TLC",
+                "details": "Official variant SKU: OFFICIAL, 83DV01AFIN",
+                "price_note": "+\u20b911,000",
+                "alt_price_note": "",
+                "included": true
+              },
+              {
+                "name": "512 GB SSD M.2 2242 PCIe Gen4 TLC",
+                "details": "Official variant SKU: OFFICIAL, 83DV01A5IN (+1 more)",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": false
+              }
+            ]
+          },
+          {
+            "name": "Display",
+            "options": [
+              {
+                "name": "1920 x 1080",
+                "details": "Official variant SKU: OFFICIAL, 83DV01A5IN (+1 more)",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              },
+              {
+                "name": "39.62cms (15.6) FHD (1920 x 1080), IPS, Anti-Glare, Non-Touch, 100%sRGB, 300 nits, 144 Hz",
+                "details": "Official variant SKU: OFFICIAL, 83DV01A5IN (+1 more)",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": false
+              }
+            ]
+          },
+          {
+            "name": "Keyboard",
+            "options": [
+              {
+                "name": "4zone RGB Backlit, Eclipse Black - English (US)",
+                "details": "Official variant SKU: OFFICIAL, 83DV01A5IN (+1 more)",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Warranty & Protection",
+            "options": [
+              {
+                "name": "1 Year On-site",
+                "details": "Official variant SKU: OFFICIAL, 83DV01A5IN (+1 more)",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              },
+              {
+                "name": "1YR Accidental Damage Protection",
+                "details": "Official variant SKU: OFFICIAL, 83DV01A5IN (+1 more)",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": false
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "https://www.lenovo.com/in/en/p/laptops/loq-laptops/lenovo-loq-15irx9/len101q0005": {
+    "version": 2,
+    "fetched_at": 1771782948,
+    "data": {
+      "customization_available": true,
+      "customization_options": [
+        "Processor: 2 official options",
+        "Graphics Card: 2 official options",
+        "Storage: 2 official options",
+        "Display: 2 official options",
+        "Warranty & Protection: 2 official options"
+      ],
+      "configuration": {
+        "title": "Configuration",
+        "collapse_hint": "Official Lenovo options",
+        "warranty_note": "Options synced from official Lenovo India variant listings. Price differences are estimated from listed variant pricing and may vary at checkout.",
+        "categories": [
+          {
+            "name": "Processor",
+            "options": [
+              {
+                "name": "13th Generation Intel\u00ae Core\u2122 i5-13450HX Processor (E-cores up to 3.40 GHz P-cores up to 4.60 GHz)",
+                "details": "Official variant SKU: OFFICIAL, 83DV018JIN (+1 more)",
+                "price_note": "-\u20b97,500",
+                "alt_price_note": "",
+                "included": true
+              },
+              {
+                "name": "13th Generation Intel\u00ae Core\u2122 i7-13650HX Processor (E-cores up to 3.60 GHz P-cores up to 4.90 GHz)",
+                "details": "Official variant SKU: OFFICIAL, 83DV01A5IN",
+                "price_note": "+\u20b917,499",
+                "alt_price_note": "",
+                "included": false
+              }
+            ]
+          },
+          {
+            "name": "Operating System",
+            "options": [
+              {
+                "name": "Windows 11 Home Single Language 64",
+                "details": "Official variant SKU: OFFICIAL, 83DV01A5IN (+1 more)",
+                "price_note": "-\u20b97,500",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Graphics Card",
+            "options": [
+              {
+                "name": "NVIDIA\u00ae GeForce RTX\u2122 3050 Laptop GPU 6GB GDDR6",
+                "details": "Official variant SKU: OFFICIAL, 83DV018NIN (+1 more)",
+                "price_note": "-\u20b97,500",
+                "alt_price_note": "",
+                "included": true
+              },
+              {
+                "name": "NVIDIA\u00ae GeForce RTX\u2122 4050 Laptop GPU 6GB GDDR6",
+                "details": "Official variant SKU: OFFICIAL, 83DV01A5IN (+1 more)",
+                "price_note": "+\u20b94,999",
+                "alt_price_note": "",
+                "included": false
+              }
+            ]
+          },
+          {
+            "name": "Memory",
+            "options": [
+              {
+                "name": "16 GB DDR5-4800MT/s (SODIMM)",
+                "details": "Official variant SKU: OFFICIAL, 83DV01A5IN (+1 more)",
+                "price_note": "-\u20b97,500",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Storage",
+            "options": [
+              {
+                "name": "1 TB SSD M.2 2242 PCIe Gen4 TLC",
+                "details": "Official variant SKU: OFFICIAL, 83DV01AFIN",
+                "price_note": "+\u20b911,000",
+                "alt_price_note": "",
+                "included": true
+              },
+              {
+                "name": "512 GB SSD M.2 2242 PCIe Gen4 TLC",
+                "details": "Official variant SKU: OFFICIAL, 83DV01A5IN (+1 more)",
+                "price_note": "-\u20b97,500",
+                "alt_price_note": "",
+                "included": false
+              }
+            ]
+          },
+          {
+            "name": "Display",
+            "options": [
+              {
+                "name": "1920 x 1080",
+                "details": "Official variant SKU: OFFICIAL, 83DV01A5IN (+1 more)",
+                "price_note": "-\u20b97,500",
+                "alt_price_note": "",
+                "included": true
+              },
+              {
+                "name": "39.62cms (15.6) FHD (1920 x 1080), IPS, Anti-Glare, Non-Touch, 100%sRGB, 300 nits, 144 Hz",
+                "details": "Official variant SKU: OFFICIAL, 83DV01A5IN (+1 more)",
+                "price_note": "-\u20b97,500",
+                "alt_price_note": "",
+                "included": false
+              }
+            ]
+          },
+          {
+            "name": "Keyboard",
+            "options": [
+              {
+                "name": "4zone RGB Backlit, Eclipse Black - English (US)",
+                "details": "Official variant SKU: OFFICIAL, 83DV01A5IN (+1 more)",
+                "price_note": "-\u20b97,500",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Warranty & Protection",
+            "options": [
+              {
+                "name": "1 Year On-site",
+                "details": "Official variant SKU: OFFICIAL, 83DV01A5IN (+1 more)",
+                "price_note": "-\u20b97,500",
+                "alt_price_note": "",
+                "included": true
+              },
+              {
+                "name": "1YR Accidental Damage Protection",
+                "details": "Official variant SKU: OFFICIAL, 83DV01A5IN (+1 more)",
+                "price_note": "-\u20b97,500",
+                "alt_price_note": "",
+                "included": false
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "https://www.lenovo.com/in/en/p/laptops/loq-laptops/lenovo-loq-15iax9/len101q0006": {
+    "version": 2,
+    "fetched_at": 1771782948,
+    "data": {
+      "customization_available": true,
+      "customization_options": [
+        "Display: 2 official options",
+        "Warranty & Protection: 2 official options"
+      ],
+      "configuration": {
+        "title": "Configuration",
+        "collapse_hint": "Official Lenovo options",
+        "warranty_note": "Options synced from official Lenovo India variant listings. Price differences are estimated from listed variant pricing and may vary at checkout.",
+        "categories": [
+          {
+            "name": "Processor",
+            "options": [
+              {
+                "name": "12th Generation Intel\u00ae Core\u2122 i5-12450HX Processor (E-cores up to 3.10 GHz P-cores up to 4.40 GHz)",
+                "details": "Official variant SKU: OFFICIAL, 83GS00PJIN",
+                "price_note": "-\u20b95,749",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Operating System",
+            "options": [
+              {
+                "name": "Windows 11 Home Single Language 64",
+                "details": "Official variant SKU: OFFICIAL, 83GS00PJIN",
+                "price_note": "-\u20b95,749",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Graphics Card",
+            "options": [
+              {
+                "name": "NVIDIA\u00ae GeForce RTX\u2122 3050 Laptop GPU 6GB GDDR6",
+                "details": "Official variant SKU: OFFICIAL, 83GS00PJIN",
+                "price_note": "-\u20b95,749",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Memory",
+            "options": [
+              {
+                "name": "16 GB DDR5-4800MT/s (SODIMM)(2 x 8 GB)",
+                "details": "Official variant SKU: OFFICIAL, 83GS00PJIN",
+                "price_note": "-\u20b95,749",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Storage",
+            "options": [
+              {
+                "name": "512 GB SSD M.2 2242 PCIe Gen4 QLC",
+                "details": "Official variant SKU: OFFICIAL, 83GS00PJIN",
+                "price_note": "-\u20b95,749",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Display",
+            "options": [
+              {
+                "name": "1920 x 1080",
+                "details": "Official variant SKU: OFFICIAL, 83GS00PJIN",
+                "price_note": "-\u20b95,749",
+                "alt_price_note": "",
+                "included": true
+              },
+              {
+                "name": "39.62cms (15.6) FHD (1920 x 1080), IPS, Anti-Glare, Non-Touch, 100%sRGB, 300 nits, 144 Hz",
+                "details": "Official variant SKU: OFFICIAL, 83GS00PJIN",
+                "price_note": "-\u20b95,749",
+                "alt_price_note": "",
+                "included": false
+              }
+            ]
+          },
+          {
+            "name": "Keyboard",
+            "options": [
+              {
+                "name": "White Backlit, Eclipse Black - English (US)",
+                "details": "Official variant SKU: OFFICIAL, 83GS00PJIN",
+                "price_note": "-\u20b95,749",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Warranty & Protection",
+            "options": [
+              {
+                "name": "1 Year On-site",
+                "details": "Official variant SKU: OFFICIAL, 83GS00PJIN",
+                "price_note": "-\u20b95,749",
+                "alt_price_note": "",
+                "included": true
+              },
+              {
+                "name": "1YR Accidental Damage Protection",
+                "details": "Official variant SKU: OFFICIAL, 83GS00PJIN",
+                "price_note": "-\u20b95,749",
+                "alt_price_note": "",
+                "included": false
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "https://www.lenovo.com/in/en/p/laptops/loq-laptops/lenovo-loq-15arp9/83jc00gdin": {
+    "version": 2,
+    "fetched_at": 1771782949,
+    "data": {
+      "customization_available": true,
+      "customization_options": [
+        "Graphics Card: 2 official options",
+        "Display: 2 official options",
+        "Warranty & Protection: 2 official options"
+      ],
+      "configuration": {
+        "title": "Configuration",
+        "collapse_hint": "Official Lenovo options",
+        "warranty_note": "Options synced from official Lenovo India variant listings. Price differences are estimated from listed variant pricing and may vary at checkout.",
+        "categories": [
+          {
+            "name": "Processor",
+            "options": [
+              {
+                "name": "AMD Ryzen\u2122 5 7235HS Processor (3.20 GHz up to 4.20 GHz)",
+                "details": "Official variant SKU: OFFICIAL, 83JC00LRIN (+1 more)",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Operating System",
+            "options": [
+              {
+                "name": "Windows 11 Home Single Language 64",
+                "details": "Official variant SKU: OFFICIAL, 83JC00LRIN (+1 more)",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Graphics Card",
+            "options": [
+              {
+                "name": "NVIDIA\u00ae GeForce RTX\u2122 3050 A Laptop GPU 4GB GDDR6",
+                "details": "Official variant SKU: OFFICIAL, 83JC00LSIN",
+                "price_note": "+\u20b9999",
+                "alt_price_note": "",
+                "included": true
+              },
+              {
+                "name": "NVIDIA\u00ae GeForce RTX\u2122 3050 Laptop GPU 6GB GDDR6",
+                "details": "Official variant SKU: OFFICIAL, 83JC00LRIN",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": false
+              }
+            ]
+          },
+          {
+            "name": "Memory",
+            "options": [
+              {
+                "name": "16 GB DDR5-4800MT/s (SODIMM)(2 x 8 GB)",
+                "details": "Official variant SKU: OFFICIAL, 83JC00LRIN (+1 more)",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Storage",
+            "options": [
+              {
+                "name": "512 GB SSD M.2 2242 PCIe Gen4 QLC",
+                "details": "Official variant SKU: OFFICIAL, 83JC00LRIN (+1 more)",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Display",
+            "options": [
+              {
+                "name": "1920 x 1080",
+                "details": "Official variant SKU: OFFICIAL, 83JC00LRIN (+1 more)",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              },
+              {
+                "name": "39.62cms (15.6) FHD (1920 x 1080), IPS, Anti-Glare, Non-Touch, 100%sRGB, 300 nits, 144 Hz",
+                "details": "Official variant SKU: OFFICIAL, 83JC00LRIN (+1 more)",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": false
+              }
+            ]
+          },
+          {
+            "name": "Keyboard",
+            "options": [
+              {
+                "name": "White Backlit, Eclipse Black - English (US)",
+                "details": "Official variant SKU: OFFICIAL, 83JC00LRIN (+1 more)",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Warranty & Protection",
+            "options": [
+              {
+                "name": "1 Year On-site",
+                "details": "Official variant SKU: OFFICIAL, 83JC00LRIN (+1 more)",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              },
+              {
+                "name": "1YR Accidental Damage Protection",
+                "details": "Official variant SKU: OFFICIAL, 83JC00LRIN (+1 more)",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": false
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "https://www.lenovo.com/in/en/p/laptops/loq-laptops/lenovo-loq-15arp9/83jc00ehin": {
+    "version": 2,
+    "fetched_at": 1771782950,
+    "data": {
+      "customization_available": true,
+      "customization_options": [
+        "Graphics Card: 2 official options",
+        "Display: 2 official options",
+        "Warranty & Protection: 2 official options"
+      ],
+      "configuration": {
+        "title": "Configuration",
+        "collapse_hint": "Official Lenovo options",
+        "warranty_note": "Options synced from official Lenovo India variant listings. Price differences are estimated from listed variant pricing and may vary at checkout.",
+        "categories": [
+          {
+            "name": "Processor",
+            "options": [
+              {
+                "name": "AMD Ryzen\u2122 5 7235HS Processor (3.20 GHz up to 4.20 GHz)",
+                "details": "Official variant SKU: OFFICIAL, 83JC00LRIN (+1 more)",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Operating System",
+            "options": [
+              {
+                "name": "Windows 11 Home Single Language 64",
+                "details": "Official variant SKU: OFFICIAL, 83JC00LRIN (+1 more)",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Graphics Card",
+            "options": [
+              {
+                "name": "NVIDIA\u00ae GeForce RTX\u2122 3050 A Laptop GPU 4GB GDDR6",
+                "details": "Official variant SKU: OFFICIAL, 83JC00LSIN",
+                "price_note": "+\u20b9999",
+                "alt_price_note": "",
+                "included": true
+              },
+              {
+                "name": "NVIDIA\u00ae GeForce RTX\u2122 3050 Laptop GPU 6GB GDDR6",
+                "details": "Official variant SKU: OFFICIAL, 83JC00LRIN",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": false
+              }
+            ]
+          },
+          {
+            "name": "Memory",
+            "options": [
+              {
+                "name": "16 GB DDR5-4800MT/s (SODIMM)(2 x 8 GB)",
+                "details": "Official variant SKU: OFFICIAL, 83JC00LRIN (+1 more)",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Storage",
+            "options": [
+              {
+                "name": "512 GB SSD M.2 2242 PCIe Gen4 QLC",
+                "details": "Official variant SKU: OFFICIAL, 83JC00LRIN (+1 more)",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Display",
+            "options": [
+              {
+                "name": "1920 x 1080",
+                "details": "Official variant SKU: OFFICIAL, 83JC00LRIN (+1 more)",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              },
+              {
+                "name": "39.62cms (15.6) FHD (1920 x 1080), IPS, Anti-Glare, Non-Touch, 100%sRGB, 300 nits, 144 Hz",
+                "details": "Official variant SKU: OFFICIAL, 83JC00LRIN (+1 more)",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": false
+              }
+            ]
+          },
+          {
+            "name": "Keyboard",
+            "options": [
+              {
+                "name": "White Backlit, Eclipse Black - English (US)",
+                "details": "Official variant SKU: OFFICIAL, 83JC00LRIN (+1 more)",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Warranty & Protection",
+            "options": [
+              {
+                "name": "1 Year On-site",
+                "details": "Official variant SKU: OFFICIAL, 83JC00LRIN (+1 more)",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              },
+              {
+                "name": "1YR Accidental Damage Protection",
+                "details": "Official variant SKU: OFFICIAL, 83JC00LRIN (+1 more)",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": false
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "https://www.lenovo.com/in/en/p/laptops/loq-laptops/lenovo-loq-essential-gen-9-15-intel/len101q0010": {
+    "version": 2,
+    "fetched_at": 1771782951,
+    "data": {
+      "customization_available": true,
+      "customization_options": [
+        "Display: 2 official options",
+        "Warranty & Protection: 2 official options"
+      ],
+      "configuration": {
+        "title": "Configuration",
+        "collapse_hint": "Official Lenovo options",
+        "warranty_note": "Options synced from official Lenovo India variant listings. Price differences are estimated from listed variant pricing and may vary at checkout.",
+        "categories": [
+          {
+            "name": "Processor",
+            "options": [
+              {
+                "name": "12th Generation Intel\u00ae Core\u2122 i5-12450HX Processor (E-cores up to 3.10 GHz P-cores up to 4.40 GHz)",
+                "details": "Official variant SKU: OFFICIAL, 83LK009VIN",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Operating System",
+            "options": [
+              {
+                "name": "Windows 11 Home Single Language 64",
+                "details": "Official variant SKU: OFFICIAL, 83LK009VIN",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Graphics Card",
+            "options": [
+              {
+                "name": "NVIDIA\u00ae GeForce RTX\u2122 3050 A Laptop GPU 4GB GDDR6",
+                "details": "Official variant SKU: OFFICIAL, 83LK009VIN",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Memory",
+            "options": [
+              {
+                "name": "16 GB DDR5-4800MT/s (SODIMM)",
+                "details": "Official variant SKU: OFFICIAL, 83LK009VIN",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Storage",
+            "options": [
+              {
+                "name": "512 GB SSD M.2 2242 PCIe Gen4 QLC",
+                "details": "Official variant SKU: OFFICIAL, 83LK009VIN",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Display",
+            "options": [
+              {
+                "name": "1920 x 1080",
+                "details": "Official variant SKU: OFFICIAL, 83LK009VIN",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              },
+              {
+                "name": "39.62cms (15.6) FHD (1920 x 1080), IPS, Anti-Glare, Non-Touch, 100%sRGB, 300 nits, 144 Hz",
+                "details": "Official variant SKU: OFFICIAL, 83LK009VIN",
+                "price_note": "+\u20b916,499",
+                "alt_price_note": "",
+                "included": false
+              }
+            ]
+          },
+          {
+            "name": "Keyboard",
+            "options": [
+              {
+                "name": "White Backlit, Storm Grey - English (US)",
+                "details": "Official variant SKU: OFFICIAL, 83LK009VIN",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Warranty & Protection",
+            "options": [
+              {
+                "name": "1YR Accidental Damage Protection",
+                "details": "Official variant SKU: OFFICIAL, 83LK009VIN",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              },
+              {
+                "name": "1 Year On-site",
+                "details": "Official variant SKU: OFFICIAL, 83LK009VIN",
+                "price_note": "+\u20b916,499",
+                "alt_price_note": "",
+                "included": false
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "https://www.lenovo.com/in/en/p/laptops/loq-laptops/lenovo-loq-15irh8/len101q0001": {
+    "version": 2,
+    "fetched_at": 1771782951,
+    "data": {
+      "customization_available": false,
+      "customization_options": [
+        "Processor: official Lenovo spec",
+        "Operating System: official Lenovo spec",
+        "Memory: official Lenovo spec",
+        "Storage: official Lenovo spec",
+        "Display: official Lenovo spec"
+      ],
+      "configuration": {
+        "title": "Configuration",
+        "collapse_hint": "Official Lenovo options",
+        "warranty_note": "Options synced from official Lenovo India variant listings. Price differences are estimated from listed variant pricing and may vary at checkout.",
+        "categories": [
+          {
+            "name": "Processor",
+            "options": [
+              {
+                "name": "Up to 13th Gen Intel\u00ae Core\u2122 i7-13700H",
+                "details": "Official variant SKU: OFFICIAL, LEN101Q0001",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Operating System",
+            "options": [
+              {
+                "name": "Up to Windows 11 Pro",
+                "details": "Official variant SKU: OFFICIAL, LEN101Q0001",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Memory",
+            "options": [
+              {
+                "name": "Up to 16GB",
+                "details": "Official variant SKU: OFFICIAL, LEN101Q0001",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Storage",
+            "options": [
+              {
+                "name": "Up to 1TB PCIe SSD",
+                "details": "Official variant SKU: OFFICIAL, LEN101Q0001",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Display",
+            "options": [
+              {
+                "name": "Up to 38.10cms (15) WQHD (2560 x 1440) IPS, 350 nits, 16:9 aspect ratio, 165Hz variable refresh rate",
+                "details": "Official variant SKU: OFFICIAL, LEN101Q0001",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "https://www.lenovo.com/in/en/p/laptops/loq-laptops/lenovo-loq-15arp9/83jc00efin": {
+    "version": 2,
+    "fetched_at": 1771782952,
+    "data": {
+      "customization_available": true,
+      "customization_options": [
+        "Graphics Card: 2 official options",
+        "Memory: 2 official options",
+        "Display: 3 official options",
+        "Warranty & Protection: 2 official options",
+        "Software: 2 official options"
+      ],
+      "configuration": {
+        "title": "Configuration",
+        "collapse_hint": "Official Lenovo options",
+        "warranty_note": "Options synced from official Lenovo India variant listings. Price differences are estimated from listed variant pricing and may vary at checkout.",
+        "categories": [
+          {
+            "name": "Processor",
+            "options": [
+              {
+                "name": "AMD Ryzen\u2122 5 7235HS Processor (3.20 GHz up to 4.20 GHz)",
+                "details": "Official variant SKU: OFFICIAL, 83JC00EFIN (+1 more)",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Operating System",
+            "options": [
+              {
+                "name": "Windows 11 Home Single Language 64",
+                "details": "Official variant SKU: OFFICIAL, 83JC00EFIN (+1 more)",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Graphics Card",
+            "options": [
+              {
+                "name": "NVIDIA\u00ae GeForce RTX\u2122 3050 Laptop GPU 6GB GDDR6",
+                "details": "Official variant SKU: OFFICIAL, 83JC00EFIN (+1 more)",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              },
+              {
+                "name": "NVIDIA\u00ae GeForce RTX\u2122 3050 A Laptop GPU 4GB GDDR6",
+                "details": "Official variant SKU: OFFICIAL, 83JC00LSIN",
+                "price_note": "+\u20b9999",
+                "alt_price_note": "",
+                "included": false
+              }
+            ]
+          },
+          {
+            "name": "Memory",
+            "options": [
+              {
+                "name": "24 GB DDR5-4800MT/s (SODIMM)(2 x 12 GB)",
+                "details": "Official variant SKU: OFFICIAL, 83JC00EFIN",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              },
+              {
+                "name": "16 GB DDR5-4800MT/s (SODIMM)(2 x 8 GB)",
+                "details": "Official variant SKU: OFFICIAL, 83JC00LRIN (+1 more)",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": false
+              }
+            ]
+          },
+          {
+            "name": "Storage",
+            "options": [
+              {
+                "name": "512 GB SSD M.2 2242 PCIe Gen4 QLC",
+                "details": "Official variant SKU: OFFICIAL, 83JC00EFIN (+1 more)",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Display",
+            "options": [
+              {
+                "name": "1920 x 1080",
+                "details": "Official variant SKU: OFFICIAL, 83JC00EFIN (+1 more)",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              },
+              {
+                "name": "39.62cms (15.6) FHD (1920 x 1080), IPS, Anti-Glare, Non-Touch, 100%sRGB, 300 nits, 144 Hz",
+                "details": "Official variant SKU: OFFICIAL, 83JC00LRIN (+1 more)",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": false
+              },
+              {
+                "name": "39.62cms (15.6) FHD (1920 x 1080), IPS, Anti-Glare, Non-Touch, 100%sRGB, 300 nits, 144Hz",
+                "details": "Official variant SKU: OFFICIAL, 83JC00EFIN",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": false
+              }
+            ]
+          },
+          {
+            "name": "Keyboard",
+            "options": [
+              {
+                "name": "White Backlit, Eclipse Black - English (US)",
+                "details": "Official variant SKU: OFFICIAL, 83JC00EFIN (+1 more)",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Warranty & Protection",
+            "options": [
+              {
+                "name": "1YR Accidental Damage Protection",
+                "details": "Official variant SKU: OFFICIAL, 83JC00EFIN (+1 more)",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              },
+              {
+                "name": "1 Year On-site",
+                "details": "Official variant SKU: OFFICIAL, 83JC00EFIN (+1 more)",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": false
+              }
+            ]
+          },
+          {
+            "name": "Software",
+            "options": [
+              {
+                "name": "Office Home 2024",
+                "details": "Official variant SKU: OFFICIAL, 83JC00EFIN",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              },
+              {
+                "name": "MS Office Home 2024",
+                "details": "Official variant SKU: OFFICIAL, 83JC00LRIN (+1 more)",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": false
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "https://www.lenovo.com/in/en/p/laptops/loq-laptops/lenovo-loq-15aph8/len101q0004": {
+    "version": 2,
+    "fetched_at": 1771782952,
+    "data": {
+      "customization_available": false,
+      "customization_options": [
+        "Processor: official Lenovo spec",
+        "Operating System: official Lenovo spec",
+        "Memory: official Lenovo spec",
+        "Storage: official Lenovo spec",
+        "Display: official Lenovo spec"
+      ],
+      "configuration": {
+        "title": "Configuration",
+        "collapse_hint": "Official Lenovo options",
+        "warranty_note": "Options synced from official Lenovo India variant listings. Price differences are estimated from listed variant pricing and may vary at checkout.",
+        "categories": [
+          {
+            "name": "Processor",
+            "options": [
+              {
+                "name": "Up to AMD Ryzen\u2122 7 7840HS",
+                "details": "Official variant SKU: OFFICIAL, LEN101Q0004",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Operating System",
+            "options": [
+              {
+                "name": "Up to Windows 11 Pro",
+                "details": "Official variant SKU: OFFICIAL, LEN101Q0004",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Memory",
+            "options": [
+              {
+                "name": "Up to 32GB DDR5",
+                "details": "Official variant SKU: OFFICIAL, LEN101Q0004",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Storage",
+            "options": [
+              {
+                "name": "Up to 2TB SSD",
+                "details": "Official variant SKU: OFFICIAL, LEN101Q0004",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Display",
+            "options": [
+              {
+                "name": "Up to 38.10cms (15) WQHD (2560 x 1440) IPS, 350 nits, 16:9 aspect ratio",
+                "details": "Official variant SKU: OFFICIAL, LEN101Q0004",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "https://www.lenovo.com/in/en/p/laptops/loq-laptops/lenovo-loq-15irx9/83dv0127in": {
+    "version": 2,
+    "fetched_at": 1771782954,
+    "data": {
+      "customization_available": true,
+      "customization_options": [
+        "Processor: 2 official options",
+        "Graphics Card: 2 official options",
+        "Storage: 2 official options",
+        "Display: 2 official options",
+        "Warranty & Protection: 2 official options"
+      ],
+      "configuration": {
+        "title": "Configuration",
+        "collapse_hint": "Official Lenovo options",
+        "warranty_note": "Options synced from official Lenovo India variant listings. Price differences are estimated from listed variant pricing and may vary at checkout.",
+        "categories": [
+          {
+            "name": "Processor",
+            "options": [
+              {
+                "name": "13th Generation Intel\u00ae Core\u2122 i5-13450HX Processor (E-cores up to 3.40 GHz P-cores up to 4.60 GHz)",
+                "details": "Official variant SKU: OFFICIAL, 83DV018JIN (+1 more)",
+                "price_note": "-\u20b97,500",
+                "alt_price_note": "",
+                "included": true
+              },
+              {
+                "name": "13th Generation Intel\u00ae Core\u2122 i7-13650HX Processor (E-cores up to 3.60 GHz P-cores up to 4.90 GHz)",
+                "details": "Official variant SKU: OFFICIAL, 83DV01A5IN",
+                "price_note": "+\u20b917,499",
+                "alt_price_note": "",
+                "included": false
+              }
+            ]
+          },
+          {
+            "name": "Operating System",
+            "options": [
+              {
+                "name": "Windows 11 Home Single Language 64",
+                "details": "Official variant SKU: OFFICIAL, 83DV01A5IN (+1 more)",
+                "price_note": "-\u20b97,500",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Graphics Card",
+            "options": [
+              {
+                "name": "NVIDIA\u00ae GeForce RTX\u2122 3050 Laptop GPU 6GB GDDR6",
+                "details": "Official variant SKU: OFFICIAL, 83DV018NIN (+1 more)",
+                "price_note": "-\u20b97,500",
+                "alt_price_note": "",
+                "included": true
+              },
+              {
+                "name": "NVIDIA\u00ae GeForce RTX\u2122 4050 Laptop GPU 6GB GDDR6",
+                "details": "Official variant SKU: OFFICIAL, 83DV01A5IN (+1 more)",
+                "price_note": "+\u20b94,999",
+                "alt_price_note": "",
+                "included": false
+              }
+            ]
+          },
+          {
+            "name": "Memory",
+            "options": [
+              {
+                "name": "16 GB DDR5-4800MT/s (SODIMM)",
+                "details": "Official variant SKU: OFFICIAL, 83DV01A5IN (+1 more)",
+                "price_note": "-\u20b97,500",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Storage",
+            "options": [
+              {
+                "name": "1 TB SSD M.2 2242 PCIe Gen4 TLC",
+                "details": "Official variant SKU: OFFICIAL, 83DV01AFIN",
+                "price_note": "+\u20b911,000",
+                "alt_price_note": "",
+                "included": true
+              },
+              {
+                "name": "512 GB SSD M.2 2242 PCIe Gen4 TLC",
+                "details": "Official variant SKU: OFFICIAL, 83DV01A5IN (+1 more)",
+                "price_note": "-\u20b97,500",
+                "alt_price_note": "",
+                "included": false
+              }
+            ]
+          },
+          {
+            "name": "Display",
+            "options": [
+              {
+                "name": "1920 x 1080",
+                "details": "Official variant SKU: OFFICIAL, 83DV01A5IN (+1 more)",
+                "price_note": "-\u20b97,500",
+                "alt_price_note": "",
+                "included": true
+              },
+              {
+                "name": "39.62cms (15.6) FHD (1920 x 1080), IPS, Anti-Glare, Non-Touch, 100%sRGB, 300 nits, 144 Hz",
+                "details": "Official variant SKU: OFFICIAL, 83DV01A5IN (+1 more)",
+                "price_note": "-\u20b97,500",
+                "alt_price_note": "",
+                "included": false
+              }
+            ]
+          },
+          {
+            "name": "Keyboard",
+            "options": [
+              {
+                "name": "4zone RGB Backlit, Eclipse Black - English (US)",
+                "details": "Official variant SKU: OFFICIAL, 83DV01A5IN (+1 more)",
+                "price_note": "-\u20b97,500",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Warranty & Protection",
+            "options": [
+              {
+                "name": "1 Year On-site",
+                "details": "Official variant SKU: OFFICIAL, 83DV01A5IN (+1 more)",
+                "price_note": "-\u20b97,500",
+                "alt_price_note": "",
+                "included": true
+              },
+              {
+                "name": "1YR Accidental Damage Protection",
+                "details": "Official variant SKU: OFFICIAL, 83DV01A5IN (+1 more)",
+                "price_note": "-\u20b97,500",
+                "alt_price_note": "",
+                "included": false
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "https://www.lenovo.com/in/en/p/laptops/loq-laptops/lenovo-loq-16irh8/len101q0002": {
+    "version": 2,
+    "fetched_at": 1771782954,
+    "data": {
+      "customization_available": false,
+      "customization_options": [
+        "Processor: official Lenovo spec",
+        "Operating System: official Lenovo spec",
+        "Memory: official Lenovo spec",
+        "Storage: official Lenovo spec",
+        "Display: official Lenovo spec"
+      ],
+      "configuration": {
+        "title": "Configuration",
+        "collapse_hint": "Official Lenovo options",
+        "warranty_note": "Options synced from official Lenovo India variant listings. Price differences are estimated from listed variant pricing and may vary at checkout.",
+        "categories": [
+          {
+            "name": "Processor",
+            "options": [
+              {
+                "name": "Up to 13th Gen Intel\u00ae Core\u2122 i7-13700H",
+                "details": "Official variant SKU: OFFICIAL, LEN101Q0002",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Operating System",
+            "options": [
+              {
+                "name": "Up to Windows 11 Pro",
+                "details": "Official variant SKU: OFFICIAL, LEN101Q0002",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Memory",
+            "options": [
+              {
+                "name": "Up to 32GB 5600Mhz DDR5",
+                "details": "Official variant SKU: OFFICIAL, LEN101Q0002",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Storage",
+            "options": [
+              {
+                "name": "Up to 1TB PCIe NVMe\u2122 Gen4 SSD",
+                "details": "Official variant SKU: OFFICIAL, LEN101Q0002",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Display",
+            "options": [
+              {
+                "name": "Up to 40.64cms (16) WQXGA (2560 x 1600) IPS, 350 nits, 16:10 aspect ratio, 165Hz variable refresh rate",
+                "details": "Official variant SKU: OFFICIAL, LEN101Q0002",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "https://www.lenovo.com/in/en/p/laptops/loq-laptops/lenovo-loq-15arp9/len101q0009": {
+    "version": 2,
+    "fetched_at": 1771782955,
+    "data": {
+      "customization_available": true,
+      "customization_options": [
+        "Graphics Card: 2 official options",
+        "Display: 2 official options",
+        "Warranty & Protection: 2 official options"
+      ],
+      "configuration": {
+        "title": "Configuration",
+        "collapse_hint": "Official Lenovo options",
+        "warranty_note": "Options synced from official Lenovo India variant listings. Price differences are estimated from listed variant pricing and may vary at checkout.",
+        "categories": [
+          {
+            "name": "Processor",
+            "options": [
+              {
+                "name": "AMD Ryzen\u2122 5 7235HS Processor (3.20 GHz up to 4.20 GHz)",
+                "details": "Official variant SKU: OFFICIAL, 83JC00LRIN (+1 more)",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Operating System",
+            "options": [
+              {
+                "name": "Windows 11 Home Single Language 64",
+                "details": "Official variant SKU: OFFICIAL, 83JC00LRIN (+1 more)",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Graphics Card",
+            "options": [
+              {
+                "name": "NVIDIA\u00ae GeForce RTX\u2122 3050 A Laptop GPU 4GB GDDR6",
+                "details": "Official variant SKU: OFFICIAL, 83JC00LSIN",
+                "price_note": "+\u20b9999",
+                "alt_price_note": "",
+                "included": true
+              },
+              {
+                "name": "NVIDIA\u00ae GeForce RTX\u2122 3050 Laptop GPU 6GB GDDR6",
+                "details": "Official variant SKU: OFFICIAL, 83JC00LRIN",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": false
+              }
+            ]
+          },
+          {
+            "name": "Memory",
+            "options": [
+              {
+                "name": "16 GB DDR5-4800MT/s (SODIMM)(2 x 8 GB)",
+                "details": "Official variant SKU: OFFICIAL, 83JC00LRIN (+1 more)",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Storage",
+            "options": [
+              {
+                "name": "512 GB SSD M.2 2242 PCIe Gen4 QLC",
+                "details": "Official variant SKU: OFFICIAL, 83JC00LRIN (+1 more)",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Display",
+            "options": [
+              {
+                "name": "1920 x 1080",
+                "details": "Official variant SKU: OFFICIAL, 83JC00LRIN (+1 more)",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              },
+              {
+                "name": "39.62cms (15.6) FHD (1920 x 1080), IPS, Anti-Glare, Non-Touch, 100%sRGB, 300 nits, 144 Hz",
+                "details": "Official variant SKU: OFFICIAL, 83JC00LRIN (+1 more)",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": false
+              }
+            ]
+          },
+          {
+            "name": "Keyboard",
+            "options": [
+              {
+                "name": "White Backlit, Eclipse Black - English (US)",
+                "details": "Official variant SKU: OFFICIAL, 83JC00LRIN (+1 more)",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Warranty & Protection",
+            "options": [
+              {
+                "name": "1 Year On-site",
+                "details": "Official variant SKU: OFFICIAL, 83JC00LRIN (+1 more)",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              },
+              {
+                "name": "1YR Accidental Damage Protection",
+                "details": "Official variant SKU: OFFICIAL, 83JC00LRIN (+1 more)",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": false
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "https://www.lenovo.com/in/en/p/laptops/loq-laptops/lenovo-loq-15iax9/83gscto1wwin1": {
+    "version": 2,
+    "fetched_at": 1771782956,
+    "data": {
+      "customization_available": true,
+      "customization_options": [
+        "Display: 2 official options",
+        "Warranty & Protection: 2 official options"
+      ],
+      "configuration": {
+        "title": "Configuration",
+        "collapse_hint": "Official Lenovo options",
+        "warranty_note": "Options synced from official Lenovo India variant listings. Price differences are estimated from listed variant pricing and may vary at checkout.",
+        "categories": [
+          {
+            "name": "Processor",
+            "options": [
+              {
+                "name": "12th Generation Intel\u00ae Core\u2122 i5-12450HX Processor (E-cores up to 3.10 GHz P-cores up to 4.40 GHz)",
+                "details": "Official variant SKU: OFFICIAL, 83GS00PJIN",
+                "price_note": "-\u20b95,749",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Operating System",
+            "options": [
+              {
+                "name": "Windows 11 Home Single Language 64",
+                "details": "Official variant SKU: OFFICIAL, 83GS00PJIN",
+                "price_note": "-\u20b95,749",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Graphics Card",
+            "options": [
+              {
+                "name": "NVIDIA\u00ae GeForce RTX\u2122 3050 Laptop GPU 6GB GDDR6",
+                "details": "Official variant SKU: OFFICIAL, 83GS00PJIN",
+                "price_note": "-\u20b95,749",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Memory",
+            "options": [
+              {
+                "name": "16 GB DDR5-4800MT/s (SODIMM)(2 x 8 GB)",
+                "details": "Official variant SKU: OFFICIAL, 83GS00PJIN",
+                "price_note": "-\u20b95,749",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Storage",
+            "options": [
+              {
+                "name": "512 GB SSD M.2 2242 PCIe Gen4 QLC",
+                "details": "Official variant SKU: OFFICIAL, 83GS00PJIN",
+                "price_note": "-\u20b95,749",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Display",
+            "options": [
+              {
+                "name": "1920 x 1080",
+                "details": "Official variant SKU: OFFICIAL, 83GS00PJIN",
+                "price_note": "-\u20b95,749",
+                "alt_price_note": "",
+                "included": true
+              },
+              {
+                "name": "39.62cms (15.6) FHD (1920 x 1080), IPS, Anti-Glare, Non-Touch, 100%sRGB, 300 nits, 144 Hz",
+                "details": "Official variant SKU: OFFICIAL, 83GS00PJIN",
+                "price_note": "-\u20b95,749",
+                "alt_price_note": "",
+                "included": false
+              }
+            ]
+          },
+          {
+            "name": "Keyboard",
+            "options": [
+              {
+                "name": "White Backlit, Eclipse Black - English (US)",
+                "details": "Official variant SKU: OFFICIAL, 83GS00PJIN",
+                "price_note": "-\u20b95,749",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Warranty & Protection",
+            "options": [
+              {
+                "name": "1 Year On-site",
+                "details": "Official variant SKU: OFFICIAL, 83GS00PJIN",
+                "price_note": "-\u20b95,749",
+                "alt_price_note": "",
+                "included": true
+              },
+              {
+                "name": "1YR Accidental Damage Protection",
+                "details": "Official variant SKU: OFFICIAL, 83GS00PJIN",
+                "price_note": "-\u20b95,749",
+                "alt_price_note": "",
+                "included": false
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "https://www.lenovo.com/in/en/p/laptops/loq-laptops/lenovo-loq-15irx9/83dvcto1wwin1": {
+    "version": 2,
+    "fetched_at": 1771782957,
+    "data": {
+      "customization_available": true,
+      "customization_options": [
+        "Processor: 2 official options",
+        "Graphics Card: 2 official options",
+        "Storage: 2 official options",
+        "Display: 2 official options",
+        "Warranty & Protection: 2 official options"
+      ],
+      "configuration": {
+        "title": "Configuration",
+        "collapse_hint": "Official Lenovo options",
+        "warranty_note": "Options synced from official Lenovo India variant listings. Price differences are estimated from listed variant pricing and may vary at checkout.",
+        "categories": [
+          {
+            "name": "Processor",
+            "options": [
+              {
+                "name": "13th Generation Intel\u00ae Core\u2122 i5-13450HX Processor (E-cores up to 3.40 GHz P-cores up to 4.60 GHz)",
+                "details": "Official variant SKU: OFFICIAL, 83DV018JIN (+1 more)",
+                "price_note": "-\u20b97,500",
+                "alt_price_note": "",
+                "included": true
+              },
+              {
+                "name": "13th Generation Intel\u00ae Core\u2122 i7-13650HX Processor (E-cores up to 3.60 GHz P-cores up to 4.90 GHz)",
+                "details": "Official variant SKU: OFFICIAL, 83DV01A5IN",
+                "price_note": "+\u20b917,499",
+                "alt_price_note": "",
+                "included": false
+              }
+            ]
+          },
+          {
+            "name": "Operating System",
+            "options": [
+              {
+                "name": "Windows 11 Home Single Language 64",
+                "details": "Official variant SKU: OFFICIAL, 83DV01A5IN (+1 more)",
+                "price_note": "-\u20b97,500",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Graphics Card",
+            "options": [
+              {
+                "name": "NVIDIA\u00ae GeForce RTX\u2122 3050 Laptop GPU 6GB GDDR6",
+                "details": "Official variant SKU: OFFICIAL, 83DV018NIN (+1 more)",
+                "price_note": "-\u20b97,500",
+                "alt_price_note": "",
+                "included": true
+              },
+              {
+                "name": "NVIDIA\u00ae GeForce RTX\u2122 4050 Laptop GPU 6GB GDDR6",
+                "details": "Official variant SKU: OFFICIAL, 83DV01A5IN (+1 more)",
+                "price_note": "+\u20b94,999",
+                "alt_price_note": "",
+                "included": false
+              }
+            ]
+          },
+          {
+            "name": "Memory",
+            "options": [
+              {
+                "name": "16 GB DDR5-4800MT/s (SODIMM)",
+                "details": "Official variant SKU: OFFICIAL, 83DV01A5IN (+1 more)",
+                "price_note": "-\u20b97,500",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Storage",
+            "options": [
+              {
+                "name": "1 TB SSD M.2 2242 PCIe Gen4 TLC",
+                "details": "Official variant SKU: OFFICIAL, 83DV01AFIN",
+                "price_note": "+\u20b911,000",
+                "alt_price_note": "",
+                "included": true
+              },
+              {
+                "name": "512 GB SSD M.2 2242 PCIe Gen4 TLC",
+                "details": "Official variant SKU: OFFICIAL, 83DV01A5IN (+1 more)",
+                "price_note": "-\u20b97,500",
+                "alt_price_note": "",
+                "included": false
+              }
+            ]
+          },
+          {
+            "name": "Display",
+            "options": [
+              {
+                "name": "1920 x 1080",
+                "details": "Official variant SKU: OFFICIAL, 83DV01A5IN (+1 more)",
+                "price_note": "-\u20b97,500",
+                "alt_price_note": "",
+                "included": true
+              },
+              {
+                "name": "39.62cms (15.6) FHD (1920 x 1080), IPS, Anti-Glare, Non-Touch, 100%sRGB, 300 nits, 144 Hz",
+                "details": "Official variant SKU: OFFICIAL, 83DV01A5IN (+1 more)",
+                "price_note": "-\u20b97,500",
+                "alt_price_note": "",
+                "included": false
+              }
+            ]
+          },
+          {
+            "name": "Keyboard",
+            "options": [
+              {
+                "name": "4zone RGB Backlit, Eclipse Black - English (US)",
+                "details": "Official variant SKU: OFFICIAL, 83DV01A5IN (+1 more)",
+                "price_note": "-\u20b97,500",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Warranty & Protection",
+            "options": [
+              {
+                "name": "1 Year On-site",
+                "details": "Official variant SKU: OFFICIAL, 83DV01A5IN (+1 more)",
+                "price_note": "-\u20b97,500",
+                "alt_price_note": "",
+                "included": true
+              },
+              {
+                "name": "1YR Accidental Damage Protection",
+                "details": "Official variant SKU: OFFICIAL, 83DV01A5IN (+1 more)",
+                "price_note": "-\u20b97,500",
+                "alt_price_note": "",
+                "included": false
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "https://www.lenovo.com/in/en/p/laptops/loq-laptops/lenovo-loq-essential-gen-9-15-intel/83lk0032in": {
+    "version": 2,
+    "fetched_at": 1771782958,
+    "data": {
+      "customization_available": true,
+      "customization_options": [
+        "Graphics Card: 2 official options",
+        "Memory: 2 official options",
+        "Display: 3 official options",
+        "Warranty & Protection: 2 official options",
+        "Software: 2 official options"
+      ],
+      "configuration": {
+        "title": "Configuration",
+        "collapse_hint": "Official Lenovo options",
+        "warranty_note": "Options synced from official Lenovo India variant listings. Price differences are estimated from listed variant pricing and may vary at checkout.",
+        "categories": [
+          {
+            "name": "Processor",
+            "options": [
+              {
+                "name": "12th Generation Intel\u00ae Core\u2122 i5-12450HX Processor (E-cores up to 3.10 GHz P-cores up to 4.40 GHz)",
+                "details": "Official variant SKU: OFFICIAL, 83LK0032IN (+1 more)",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Operating System",
+            "options": [
+              {
+                "name": "Windows 11 Home Single Language 64",
+                "details": "Official variant SKU: OFFICIAL, 83LK0032IN (+1 more)",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Graphics Card",
+            "options": [
+              {
+                "name": "NVIDIA\u00ae GeForce RTX\u2122 2050 Laptop GPU 4GB GDDR6",
+                "details": "Official variant SKU: OFFICIAL, 83LK0032IN",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              },
+              {
+                "name": "NVIDIA\u00ae GeForce RTX\u2122 3050 A Laptop GPU 4GB GDDR6",
+                "details": "Official variant SKU: OFFICIAL, 83LK009VIN",
+                "price_note": "+\u20b916,499",
+                "alt_price_note": "",
+                "included": false
+              }
+            ]
+          },
+          {
+            "name": "Memory",
+            "options": [
+              {
+                "name": "12 GB DDR5-4800MT/s (SODIMM)",
+                "details": "Official variant SKU: OFFICIAL, 83LK0032IN",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              },
+              {
+                "name": "16 GB DDR5-4800MT/s (SODIMM)",
+                "details": "Official variant SKU: OFFICIAL, 83LK009VIN",
+                "price_note": "+\u20b916,499",
+                "alt_price_note": "",
+                "included": false
+              }
+            ]
+          },
+          {
+            "name": "Storage",
+            "options": [
+              {
+                "name": "512 GB SSD M.2 2242 PCIe Gen4 QLC",
+                "details": "Official variant SKU: OFFICIAL, 83LK0032IN (+1 more)",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Display",
+            "options": [
+              {
+                "name": "1920 x 1080",
+                "details": "Official variant SKU: OFFICIAL, 83LK0032IN (+1 more)",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              },
+              {
+                "name": "39.62cms (15.6) FHD (1920 x 1080), IPS, Anti-Glare, Non-Touch, 100%sRGB, 300 nits, 144 Hz",
+                "details": "Official variant SKU: OFFICIAL, 83LK009VIN",
+                "price_note": "+\u20b916,499",
+                "alt_price_note": "",
+                "included": false
+              },
+              {
+                "name": "39.62cms (15.6) FHD (1920 x 1080), IPS, Anti-Glare, Non-Touch, 100%sRGB, 300 nits, 144Hz",
+                "details": "Official variant SKU: OFFICIAL, 83LK0032IN",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": false
+              }
+            ]
+          },
+          {
+            "name": "Keyboard",
+            "options": [
+              {
+                "name": "White Backlit, Storm Grey - English (US)",
+                "details": "Official variant SKU: OFFICIAL, 83LK0032IN (+1 more)",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Warranty & Protection",
+            "options": [
+              {
+                "name": "1YR Accidental Damage Protection",
+                "details": "Official variant SKU: OFFICIAL, 83LK0032IN (+1 more)",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              },
+              {
+                "name": "1 Year On-site",
+                "details": "Official variant SKU: OFFICIAL, 83LK0032IN (+1 more)",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": false
+              }
+            ]
+          },
+          {
+            "name": "Software",
+            "options": [
+              {
+                "name": "Office Home 2024",
+                "details": "Official variant SKU: OFFICIAL, 83LK0032IN",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              },
+              {
+                "name": "MS Office Home 2024",
+                "details": "Official variant SKU: OFFICIAL, 83LK009VIN",
+                "price_note": "+\u20b916,499",
+                "alt_price_note": "",
+                "included": false
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "https://www.lenovo.com/in/en/p/laptops/loq-laptops/lenovo-loq-15arp9/83jc00egin": {
+    "version": 2,
+    "fetched_at": 1771782960,
+    "data": {
+      "customization_available": true,
+      "customization_options": [
+        "Graphics Card: 2 official options",
+        "Display: 2 official options",
+        "Warranty & Protection: 2 official options"
+      ],
+      "configuration": {
+        "title": "Configuration",
+        "collapse_hint": "Official Lenovo options",
+        "warranty_note": "Options synced from official Lenovo India variant listings. Price differences are estimated from listed variant pricing and may vary at checkout.",
+        "categories": [
+          {
+            "name": "Processor",
+            "options": [
+              {
+                "name": "AMD Ryzen\u2122 5 7235HS Processor (3.20 GHz up to 4.20 GHz)",
+                "details": "Official variant SKU: OFFICIAL, 83JC00LRIN (+1 more)",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Operating System",
+            "options": [
+              {
+                "name": "Windows 11 Home Single Language 64",
+                "details": "Official variant SKU: OFFICIAL, 83JC00LRIN (+1 more)",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Graphics Card",
+            "options": [
+              {
+                "name": "NVIDIA\u00ae GeForce RTX\u2122 3050 A Laptop GPU 4GB GDDR6",
+                "details": "Official variant SKU: OFFICIAL, 83JC00LSIN",
+                "price_note": "+\u20b9999",
+                "alt_price_note": "",
+                "included": true
+              },
+              {
+                "name": "NVIDIA\u00ae GeForce RTX\u2122 3050 Laptop GPU 6GB GDDR6",
+                "details": "Official variant SKU: OFFICIAL, 83JC00LRIN",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": false
+              }
+            ]
+          },
+          {
+            "name": "Memory",
+            "options": [
+              {
+                "name": "16 GB DDR5-4800MT/s (SODIMM)(2 x 8 GB)",
+                "details": "Official variant SKU: OFFICIAL, 83JC00LRIN (+1 more)",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Storage",
+            "options": [
+              {
+                "name": "512 GB SSD M.2 2242 PCIe Gen4 QLC",
+                "details": "Official variant SKU: OFFICIAL, 83JC00LRIN (+1 more)",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Display",
+            "options": [
+              {
+                "name": "1920 x 1080",
+                "details": "Official variant SKU: OFFICIAL, 83JC00LRIN (+1 more)",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              },
+              {
+                "name": "39.62cms (15.6) FHD (1920 x 1080), IPS, Anti-Glare, Non-Touch, 100%sRGB, 300 nits, 144 Hz",
+                "details": "Official variant SKU: OFFICIAL, 83JC00LRIN (+1 more)",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": false
+              }
+            ]
+          },
+          {
+            "name": "Keyboard",
+            "options": [
+              {
+                "name": "White Backlit, Eclipse Black - English (US)",
+                "details": "Official variant SKU: OFFICIAL, 83JC00LRIN (+1 more)",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Warranty & Protection",
+            "options": [
+              {
+                "name": "1 Year On-site",
+                "details": "Official variant SKU: OFFICIAL, 83JC00LRIN (+1 more)",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              },
+              {
+                "name": "1YR Accidental Damage Protection",
+                "details": "Official variant SKU: OFFICIAL, 83JC00LRIN (+1 more)",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": false
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "https://www.lenovo.com/in/en/p/laptops/loq-laptops/lenovo-loq-essential-gen-9-15-intel/83lk009vin": {
+    "version": 2,
+    "fetched_at": 1771782960,
+    "data": {
+      "customization_available": true,
+      "customization_options": [
+        "Display: 2 official options",
+        "Warranty & Protection: 2 official options"
+      ],
+      "configuration": {
+        "title": "Configuration",
+        "collapse_hint": "Official Lenovo options",
+        "warranty_note": "Options synced from official Lenovo India variant listings. Price differences are estimated from listed variant pricing and may vary at checkout.",
+        "categories": [
+          {
+            "name": "Processor",
+            "options": [
+              {
+                "name": "12th Generation Intel\u00ae Core\u2122 i5-12450HX Processor (E-cores up to 3.10 GHz P-cores up to 4.40 GHz)",
+                "details": "Official variant SKU: OFFICIAL, 83LK009VIN",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Operating System",
+            "options": [
+              {
+                "name": "Windows 11 Home Single Language 64",
+                "details": "Official variant SKU: OFFICIAL, 83LK009VIN",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Graphics Card",
+            "options": [
+              {
+                "name": "NVIDIA\u00ae GeForce RTX\u2122 3050 A Laptop GPU 4GB GDDR6",
+                "details": "Official variant SKU: OFFICIAL, 83LK009VIN",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Memory",
+            "options": [
+              {
+                "name": "16 GB DDR5-4800MT/s (SODIMM)",
+                "details": "Official variant SKU: OFFICIAL, 83LK009VIN",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Storage",
+            "options": [
+              {
+                "name": "512 GB SSD M.2 2242 PCIe Gen4 QLC",
+                "details": "Official variant SKU: OFFICIAL, 83LK009VIN",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Display",
+            "options": [
+              {
+                "name": "1920 x 1080",
+                "details": "Official variant SKU: OFFICIAL, 83LK009VIN",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              },
+              {
+                "name": "39.62cms (15.6) FHD (1920 x 1080), IPS, Anti-Glare, Non-Touch, 100%sRGB, 300 nits, 144 Hz",
+                "details": "Official variant SKU: OFFICIAL, 83LK009VIN",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": false
+              }
+            ]
+          },
+          {
+            "name": "Keyboard",
+            "options": [
+              {
+                "name": "White Backlit, Storm Grey - English (US)",
+                "details": "Official variant SKU: OFFICIAL, 83LK009VIN",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Warranty & Protection",
+            "options": [
+              {
+                "name": "1YR Accidental Damage Protection",
+                "details": "Official variant SKU: OFFICIAL, 83LK009VIN",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              },
+              {
+                "name": "1 Year On-site",
+                "details": "Official variant SKU: OFFICIAL, 83LK009VIN",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": false
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "https://www.lenovo.com/in/en/p/laptops/legion-laptops/legion-pro-series/legion-pro-7i-gen-10-16-inch-intel/len101g0039": {
+    "version": 2,
+    "fetched_at": 1771782963,
+    "data": {
+      "customization_available": true,
+      "customization_options": [
+        "Graphics Card: 3 official options",
+        "Memory: 2 official options",
+        "Display: 4 official options",
+        "Keyboard: 2 official options",
+        "Wireless: 2 official options",
+        "Power Adapter: 2 official options",
+        "Warranty & Protection: 2 official options"
+      ],
+      "configuration": {
+        "title": "Configuration",
+        "collapse_hint": "Official Lenovo options",
+        "warranty_note": "Options synced from official Lenovo India variant listings. Price differences are estimated from listed variant pricing and may vary at checkout.",
+        "categories": [
+          {
+            "name": "Processor",
+            "options": [
+              {
+                "name": "Intel\u00ae Core\u2122 Ultra 9 275HX Processor (E-cores up to 4.60 GHz P-cores up to 5.40 GHz)",
+                "details": "Official variant SKU: OFFICIAL, 83F500D9IN (+1 more)",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Operating System",
+            "options": [
+              {
+                "name": "Windows 11 Home Single Language 64",
+                "details": "Official variant SKU: OFFICIAL, 83F500D9IN (+1 more)",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Graphics Card",
+            "options": [
+              {
+                "name": "NVIDIA\u00ae GeForce RTX\u2122 5070 Ti Laptop GPU 12GB GDDR7",
+                "details": "Official variant SKU: OFFICIAL, 83F500K1IN (+1 more)",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              },
+              {
+                "name": "NVIDIA\u00ae GeForce RTX\u2122 5080 Laptop GPU 16GB GDDR7",
+                "details": "Official variant SKU: OFFICIAL, 83F500D9IN",
+                "price_note": "+\u20b965,746",
+                "alt_price_note": "",
+                "included": false
+              },
+              {
+                "name": "NVIDIA\u00ae GeForce RTX\u2122 5090 Laptop GPU 24GB GDDR7",
+                "details": "Official variant SKU: OFFICIAL, 83F500D8IN",
+                "price_note": "+\u20b9172,246",
+                "alt_price_note": "",
+                "included": false
+              }
+            ]
+          },
+          {
+            "name": "Memory",
+            "options": [
+              {
+                "name": "32 GB DDR5-6400MT/s (CSODIMM)(2 x 16 GB)",
+                "details": "Official variant SKU: OFFICIAL, 83F500D9IN (+1 more)",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              },
+              {
+                "name": "64 GB DDR5-6400MT/s (CSODIMM)(2 x 32 GB)",
+                "details": "Official variant SKU: OFFICIAL, 83F500D8IN",
+                "price_note": "+\u20b9172,246",
+                "alt_price_note": "",
+                "included": false
+              }
+            ]
+          },
+          {
+            "name": "Storage",
+            "options": [
+              {
+                "name": "1 TB SSD M.2 2242 PCIe Gen4 TLC",
+                "details": "Official variant SKU: OFFICIAL, 83F500D9IN (+1 more)",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Display",
+            "options": [
+              {
+                "name": "2560 x 1600",
+                "details": "Official variant SKU: OFFICIAL, 83F500D9IN (+1 more)",
+                "price_note": "+\u20b914,747",
+                "alt_price_note": "",
+                "included": true
+              },
+              {
+                "name": "40.64cms (16) WQXGA (2560 x 1600), OLED, Glare, Non-Touch, HDR 1000 True Black, 100%DCI-P3, 500 nits, 240 Hz, Low Blue Light",
+                "details": "Official variant SKU: OFFICIAL, 83F500D9IN (+1 more)",
+                "price_note": "+\u20b914,747",
+                "alt_price_note": "",
+                "included": false
+              },
+              {
+                "name": "40.64cms (16) WQXGA (2560 x 1600), OLED, Glare, Non-Touch, HDR 1000 True Black, 100%DCI-P3, 500 nits, 240Hz, Low Blue Light",
+                "details": "Official variant SKU: OFFICIAL, 83F500D8IN",
+                "price_note": "+\u20b9172,246",
+                "alt_price_note": "",
+                "included": false
+              },
+              {
+                "name": "40.64cms (16) WQXGA (2560 x 1600), OLED, Glare, Non-Touch, HDR 1000 True Black, 100%DCI-P3, 500 nits, 240Hz, Low Blue Light\\n",
+                "details": "Official variant SKU: OFFICIAL, 83F5CTO1WWIN1",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": false
+              }
+            ]
+          },
+          {
+            "name": "Keyboard",
+            "options": [
+              {
+                "name": "Per-Key RGB Backlit, Black - English",
+                "details": "Official variant SKU: OFFICIAL, 83F5CTO1WWIN1",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              },
+              {
+                "name": "Per-Key RGB Backlit, Black - English (US)",
+                "details": "Official variant SKU: OFFICIAL, 83F500D9IN (+1 more)",
+                "price_note": "+\u20b914,747",
+                "alt_price_note": "",
+                "included": false
+              }
+            ]
+          },
+          {
+            "name": "Wireless",
+            "options": [
+              {
+                "name": "Wi-Fi 7 2x2 BE 320 MHz & Bluetooth\u00ae 5.4",
+                "details": "Official variant SKU: OFFICIAL, 83F500D9IN (+1 more)",
+                "price_note": "+\u20b914,747",
+                "alt_price_note": "",
+                "included": true
+              },
+              {
+                "name": "Wi-Fi 7 2x2 BE 320MHz & Bluetooth\u00ae 5.4",
+                "details": "Official variant SKU: OFFICIAL, 83F5CTO1WWIN1",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": false
+              }
+            ]
+          },
+          {
+            "name": "Power Adapter",
+            "options": [
+              {
+                "name": "400W",
+                "details": "Official variant SKU: OFFICIAL, 83F500D9IN (+1 more)",
+                "price_note": "+\u20b914,747",
+                "alt_price_note": "",
+                "included": true
+              },
+              {
+                "name": "400W 30% PCC 3pin AC Adapter - India",
+                "details": "Official variant SKU: OFFICIAL, 83F5CTO1WWIN1",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": false
+              }
+            ]
+          },
+          {
+            "name": "Warranty & Protection",
+            "options": [
+              {
+                "name": "1 Year Legion Ultimate Support",
+                "details": "Official variant SKU: OFFICIAL, 83F500D9IN (+1 more)",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              },
+              {
+                "name": "1YR Accidental Damage Protection",
+                "details": "Official variant SKU: OFFICIAL, 83F500D9IN (+1 more)",
+                "price_note": "+\u20b914,747",
+                "alt_price_note": "",
+                "included": false
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "https://www.lenovo.com/in/en/p/laptops/legion-laptops/legion-pro-series/legion-pro-7i-gen-10-16-inch-intel/83f5cto1wwin1": {
+    "version": 2,
+    "fetched_at": 1771782964,
+    "data": {
+      "customization_available": true,
+      "customization_options": [
+        "Graphics Card: 3 official options",
+        "Memory: 2 official options",
+        "Display: 4 official options",
+        "Keyboard: 2 official options",
+        "Wireless: 2 official options",
+        "Power Adapter: 2 official options",
+        "Warranty & Protection: 2 official options"
+      ],
+      "configuration": {
+        "title": "Configuration",
+        "collapse_hint": "Official Lenovo options",
+        "warranty_note": "Options synced from official Lenovo India variant listings. Price differences are estimated from listed variant pricing and may vary at checkout.",
+        "categories": [
+          {
+            "name": "Processor",
+            "options": [
+              {
+                "name": "Intel\u00ae Core\u2122 Ultra 9 275HX Processor (E-cores up to 4.60 GHz P-cores up to 5.40 GHz)",
+                "details": "Official variant SKU: OFFICIAL, 83F5CTO1WWIN1 (+1 more)",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Operating System",
+            "options": [
+              {
+                "name": "Windows 11 Home Single Language 64",
+                "details": "Official variant SKU: OFFICIAL, 83F5CTO1WWIN1 (+1 more)",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Graphics Card",
+            "options": [
+              {
+                "name": "NVIDIA\u00ae GeForce RTX\u2122 5070 Ti Laptop GPU 12GB GDDR7",
+                "details": "Official variant SKU: OFFICIAL, 83F5CTO1WWIN1 (+1 more)",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              },
+              {
+                "name": "NVIDIA\u00ae GeForce RTX\u2122 5080 Laptop GPU 16GB GDDR7",
+                "details": "Official variant SKU: OFFICIAL, 83F500D9IN",
+                "price_note": "+\u20b965,746",
+                "alt_price_note": "",
+                "included": false
+              },
+              {
+                "name": "NVIDIA\u00ae GeForce RTX\u2122 5090 Laptop GPU 24GB GDDR7",
+                "details": "Official variant SKU: OFFICIAL, 83F500D8IN",
+                "price_note": "+\u20b9172,246",
+                "alt_price_note": "",
+                "included": false
+              }
+            ]
+          },
+          {
+            "name": "Memory",
+            "options": [
+              {
+                "name": "32 GB DDR5-6400MT/s (CSODIMM) - (2 x 16 GB)",
+                "details": "Official variant SKU: OFFICIAL, 83F5CTO1WWIN1 (+1 more)",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              },
+              {
+                "name": "64 GB DDR5-6400MT/s (CSODIMM)(2 x 32 GB)",
+                "details": "Official variant SKU: OFFICIAL, 83F500D8IN",
+                "price_note": "+\u20b9172,246",
+                "alt_price_note": "",
+                "included": false
+              }
+            ]
+          },
+          {
+            "name": "Storage",
+            "options": [
+              {
+                "name": "1 TB SSD M.2 2242 PCIe Gen4 TLC",
+                "details": "Official variant SKU: OFFICIAL, 83F5CTO1WWIN1 (+1 more)",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Display",
+            "options": [
+              {
+                "name": "40.64cms (16) WQXGA (2560 x 1600), OLED, Glare, Non-Touch, HDR 1000 True Black, 100%DCI-P3, 500 nits, 240Hz, Low Blue Light\\n",
+                "details": "Official variant SKU: OFFICIAL, 83F5CTO1WWIN1",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              },
+              {
+                "name": "2560 x 1600",
+                "details": "Official variant SKU: OFFICIAL, 83F500D9IN (+1 more)",
+                "price_note": "+\u20b914,747",
+                "alt_price_note": "",
+                "included": false
+              },
+              {
+                "name": "40.64cms (16) WQXGA (2560 x 1600), OLED, Glare, Non-Touch, HDR 1000 True Black, 100%DCI-P3, 500 nits, 240 Hz, Low Blue Light",
+                "details": "Official variant SKU: OFFICIAL, 83F500D9IN (+1 more)",
+                "price_note": "+\u20b914,747",
+                "alt_price_note": "",
+                "included": false
+              },
+              {
+                "name": "40.64cms (16) WQXGA (2560 x 1600), OLED, Glare, Non-Touch, HDR 1000 True Black, 100%DCI-P3, 500 nits, 240Hz, Low Blue Light",
+                "details": "Official variant SKU: OFFICIAL, 83F500D8IN",
+                "price_note": "+\u20b9172,246",
+                "alt_price_note": "",
+                "included": false
+              }
+            ]
+          },
+          {
+            "name": "Keyboard",
+            "options": [
+              {
+                "name": "Per-Key RGB Backlit, Black - English",
+                "details": "Official variant SKU: OFFICIAL, 83F5CTO1WWIN1",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              },
+              {
+                "name": "Per-Key RGB Backlit, Black - English (US)",
+                "details": "Official variant SKU: OFFICIAL, 83F500D9IN (+1 more)",
+                "price_note": "+\u20b914,747",
+                "alt_price_note": "",
+                "included": false
+              }
+            ]
+          },
+          {
+            "name": "Wireless",
+            "options": [
+              {
+                "name": "Wi-Fi 7 2x2 BE 320MHz & Bluetooth\u00ae 5.4",
+                "details": "Official variant SKU: OFFICIAL, 83F5CTO1WWIN1",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              },
+              {
+                "name": "Wi-Fi 7 2x2 BE 320 MHz & Bluetooth\u00ae 5.4",
+                "details": "Official variant SKU: OFFICIAL, 83F500D9IN (+1 more)",
+                "price_note": "+\u20b914,747",
+                "alt_price_note": "",
+                "included": false
+              }
+            ]
+          },
+          {
+            "name": "Power Adapter",
+            "options": [
+              {
+                "name": "400W 30% PCC 3pin AC Adapter - India",
+                "details": "Official variant SKU: OFFICIAL, 83F5CTO1WWIN1",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              },
+              {
+                "name": "400W",
+                "details": "Official variant SKU: OFFICIAL, 83F500D9IN (+1 more)",
+                "price_note": "+\u20b914,747",
+                "alt_price_note": "",
+                "included": false
+              }
+            ]
+          },
+          {
+            "name": "Warranty & Protection",
+            "options": [
+              {
+                "name": "1 Year Legion Ultimate Support",
+                "details": "Official variant SKU: OFFICIAL, 83F5CTO1WWIN1 (+1 more)",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              },
+              {
+                "name": "1YR Accidental Damage Protection",
+                "details": "Official variant SKU: OFFICIAL, 83F500D9IN (+1 more)",
+                "price_note": "+\u20b914,747",
+                "alt_price_note": "",
+                "included": false
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "https://www.lenovo.com/in/en/p/laptops/legion-laptops/legion-5-series/lenovo-legion-5i-gen-9-16-inch-intel/len101g0035": {
+    "version": 2,
+    "fetched_at": 1771782965,
+    "data": {
+      "customization_available": false,
+      "customization_options": [
+        "Processor: official Lenovo spec",
+        "Operating System: official Lenovo spec",
+        "Memory: official Lenovo spec",
+        "Storage: official Lenovo spec",
+        "Display: official Lenovo spec"
+      ],
+      "configuration": {
+        "title": "Configuration",
+        "collapse_hint": "Official Lenovo options",
+        "warranty_note": "Options synced from official Lenovo India variant listings. Price differences are estimated from listed variant pricing and may vary at checkout.",
+        "categories": [
+          {
+            "name": "Processor",
+            "options": [
+              {
+                "name": "Up to Intel\u00ae Core\u2122 i9-14900HX",
+                "details": "Official variant SKU: OFFICIAL, LEN101G0035",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Operating System",
+            "options": [
+              {
+                "name": "Up to Windows 11 Pro",
+                "details": "Official variant SKU: OFFICIAL, LEN101G0035",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Memory",
+            "options": [
+              {
+                "name": "Up to 32GB 5600MHz DDR5",
+                "details": "Official variant SKU: OFFICIAL, LEN101G0035",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Storage",
+            "options": [
+              {
+                "name": "Up to 1TB M.2 2280 PCIe SSD",
+                "details": "Official variant SKU: OFFICIAL, LEN101G0035",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Display",
+            "options": [
+              {
+                "name": "Up to 16\u2033 WQXGA (2560 x 1600) IPS; 16:10",
+                "details": "Official variant SKU: OFFICIAL, LEN101G0035",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "https://www.lenovo.com/in/en/p/laptops/legion-laptops/legion-9-series/legion-9i-16-inch-intel/len101g0031": {
+    "version": 2,
+    "fetched_at": 1771782965,
+    "data": {
+      "customization_available": false,
+      "customization_options": [
+        "Processor: official Lenovo spec",
+        "Operating System: official Lenovo spec",
+        "Memory: official Lenovo spec",
+        "Storage: official Lenovo spec",
+        "Display: official Lenovo spec"
+      ],
+      "configuration": {
+        "title": "Configuration",
+        "collapse_hint": "Official Lenovo options",
+        "warranty_note": "Options synced from official Lenovo India variant listings. Price differences are estimated from listed variant pricing and may vary at checkout.",
+        "categories": [
+          {
+            "name": "Processor",
+            "options": [
+              {
+                "name": "Up to Intel\u00ae Core\u2122 i9-14900HX",
+                "details": "Official variant SKU: OFFICIAL, LEN101G0031",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Operating System",
+            "options": [
+              {
+                "name": "Up to Windows 11 Pro",
+                "details": "Official variant SKU: OFFICIAL, LEN101G0031",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Memory",
+            "options": [
+              {
+                "name": "Up to 64GB",
+                "details": "Official variant SKU: OFFICIAL, LEN101G0031",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Storage",
+            "options": [
+              {
+                "name": "Up to 2TB PCIe SSD",
+                "details": "Official variant SKU: OFFICIAL, LEN101G0031",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Display",
+            "options": [
+              {
+                "name": "Up to 3.2K Mini-LED (3200 x 2000), 1200 nits, 165Hz",
+                "details": "Official variant SKU: OFFICIAL, LEN101G0031",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "https://www.lenovo.com/in/en/p/laptops/legion-laptops/legion-5-series/lenovo-legion-slim-5-gen-9-16-inch-amd/len101g0036": {
+    "version": 2,
+    "fetched_at": 1771782965,
+    "data": {
+      "customization_available": false,
+      "customization_options": [
+        "Processor: official Lenovo spec",
+        "Operating System: official Lenovo spec",
+        "Memory: official Lenovo spec",
+        "Storage: official Lenovo spec",
+        "Display: official Lenovo spec"
+      ],
+      "configuration": {
+        "title": "Configuration",
+        "collapse_hint": "Official Lenovo options",
+        "warranty_note": "Options synced from official Lenovo India variant listings. Price differences are estimated from listed variant pricing and may vary at checkout.",
+        "categories": [
+          {
+            "name": "Processor",
+            "options": [
+              {
+                "name": "Up to AMD Ryzen\u2122 7 8945HS",
+                "details": "Official variant SKU: OFFICIAL, LEN101G0036",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Operating System",
+            "options": [
+              {
+                "name": "Up to Windows 11 Pro",
+                "details": "Official variant SKU: OFFICIAL, LEN101G0036",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Memory",
+            "options": [
+              {
+                "name": "Up to 32GB 5600MHz DDR5",
+                "details": "Official variant SKU: OFFICIAL, LEN101G0036",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Storage",
+            "options": [
+              {
+                "name": "Up to 1TB M.2 2280 PCIe SSD",
+                "details": "Official variant SKU: OFFICIAL, LEN101G0036",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Display",
+            "options": [
+              {
+                "name": "Up to 16\u2033 WQXGA (2560 x 1600) IPS; 16:10",
+                "details": "Official variant SKU: OFFICIAL, LEN101G0036",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "https://www.lenovo.com/in/en/p/laptops/legion-laptops/legion-5-series/legion-pro-5i-gen-9-16-inch-intel/len101g0033": {
+    "version": 2,
+    "fetched_at": 1771782966,
+    "data": {
+      "customization_available": false,
+      "customization_options": [
+        "Processor: official Lenovo spec",
+        "Operating System: official Lenovo spec",
+        "Memory: official Lenovo spec",
+        "Storage: official Lenovo spec",
+        "Display: official Lenovo spec"
+      ],
+      "configuration": {
+        "title": "Configuration",
+        "collapse_hint": "Official Lenovo options",
+        "warranty_note": "Options synced from official Lenovo India variant listings. Price differences are estimated from listed variant pricing and may vary at checkout.",
+        "categories": [
+          {
+            "name": "Processor",
+            "options": [
+              {
+                "name": "Up to 14th Gen Intel\u00ae Core\u2122 i9-14900HX",
+                "details": "Official variant SKU: OFFICIAL, LEN101G0033",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Operating System",
+            "options": [
+              {
+                "name": "Up to Windows 11 Pro",
+                "details": "Official variant SKU: OFFICIAL, LEN101G0033",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Memory",
+            "options": [
+              {
+                "name": "Up to 32GB",
+                "details": "Official variant SKU: OFFICIAL, LEN101G0033",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Storage",
+            "options": [
+              {
+                "name": "Up to 2TB PCIe SSD Gen 4",
+                "details": "Official variant SKU: OFFICIAL, LEN101G0033",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Display",
+            "options": [
+              {
+                "name": "Up to 16\u2033 WQXGA (2560 x 1600) IPS, 16:10 aspect ratio, 500 nits",
+                "details": "Official variant SKU: OFFICIAL, LEN101G0033",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "https://www.lenovo.com/in/en/p/laptops/legion-laptops/legion-7-series/legion-7i-gen-9-16-inch-intel/len101g0037": {
+    "version": 2,
+    "fetched_at": 1771782966,
+    "data": {
+      "customization_available": false,
+      "customization_options": [],
+      "configuration": {}
+    }
+  },
+  "https://www.lenovo.com/in/en/p/laptops/legion-laptops/legion-7-series/legion-pro-7i-gen-8-16-inch-intel/len101g0023": {
+    "version": 2,
+    "fetched_at": 1771782966,
+    "data": {
+      "customization_available": false,
+      "customization_options": [],
+      "configuration": {}
+    }
+  },
+  "https://www.lenovo.com/in/en/p/laptops/legion-laptops/legion-5-series/legion-5i-gen-9-15-inch-intel/len101g0038": {
+    "version": 2,
+    "fetched_at": 1771782967,
+    "data": {
+      "customization_available": false,
+      "customization_options": [],
+      "configuration": {}
+    }
+  },
+  "https://www.lenovo.com/in/en/p/laptops/legion-laptops/legion-5-series/legion-slim-5i-gen-8-(16-inch-intel)/len101g0027": {
+    "version": 2,
+    "fetched_at": 1771782967,
+    "data": {
+      "customization_available": false,
+      "customization_options": [
+        "Processor: official Lenovo spec",
+        "Operating System: official Lenovo spec",
+        "Memory: official Lenovo spec",
+        "Display: official Lenovo spec"
+      ],
+      "configuration": {
+        "title": "Configuration",
+        "collapse_hint": "Official Lenovo options",
+        "warranty_note": "Options synced from official Lenovo India variant listings. Price differences are estimated from listed variant pricing and may vary at checkout.",
+        "categories": [
+          {
+            "name": "Processor",
+            "options": [
+              {
+                "name": "Up to 13th Gen Intel\u00ae Core\u2122 i7-13700H",
+                "details": "Official variant SKU: OFFICIAL, LEN101G0027",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Operating System",
+            "options": [
+              {
+                "name": "Up to Windows 11 Pro",
+                "details": "Official variant SKU: OFFICIAL, LEN101G0027",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Memory",
+            "options": [
+              {
+                "name": "Up to 32GB DDR5 (2 x 16GB)",
+                "details": "Official variant SKU: OFFICIAL, LEN101G0027",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          },
+          {
+            "name": "Display",
+            "options": [
+              {
+                "name": "Up to 40.64cms (16) WQXGA (2560 x 1600) IPS; 16:10",
+                "details": "Official variant SKU: OFFICIAL, LEN101G0027",
+                "price_note": "",
+                "alt_price_note": "",
+                "included": true
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

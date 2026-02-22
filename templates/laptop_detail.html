@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block title %}Laptop Guide | Laptop Details{% endblock %}
+
+{% block content %}
+{% if laptop %}
+<article class="card">
+    <p class="note">Laptop details stub</p>
+    <div class="finder-thumb">
+        <img
+            src="{{ laptop.image_url or url_for('static', filename='images/laptop-placeholder.svg') }}"
+            alt="{{ laptop.brand }} {{ laptop.model }}"
+            loading="lazy"
+            onerror="this.onerror=null;this.src='{{ url_for('static', filename='images/laptop-placeholder.svg') }}';"
+        >
+    </div>
+    <h2>{{ laptop.brand }} {{ laptop.model }}</h2>
+    <p class="laptop-meta">${{ "{:,.0f}".format(laptop.price) }} | Rating {{ "%.1f"|format(laptop.rating) }}</p>
+    <div class="grid-2">
+        <article class="card">
+            <h3>Core Specs</h3>
+            <p><strong>Use cases:</strong> {{ laptop.use_cases|join(", ") }}</p>
+            <p><strong>CPU:</strong> {{ laptop.cpu_model }}</p>
+            <p><strong>GPU:</strong> {{ laptop.gpu_model }} ({{ laptop.gpu_type }})</p>
+            <p><strong>RAM:</strong> {{ laptop.ram_gb }}GB</p>
+            <p><strong>Storage:</strong> {{ laptop.storage_gb }}GB {{ laptop.storage_type }}</p>
+        </article>
+        <article class="card">
+            <h3>Panel and Build</h3>
+            <p><strong>Display:</strong> {{ laptop.screen_size }}" {{ laptop.resolution }} {{ laptop.refresh_hz }}Hz {{ laptop.panel }}</p>
+            <p><strong>Weight:</strong> {{ "%.2f"|format(laptop.weight_kg) }}kg</p>
+            <p>
+                <strong>Battery:</strong>
+                {% if laptop.battery_capacity_wh %}{{ laptop.battery_capacity_wh }} Wh{% else %}NA{% endif %}
+                {% if laptop.battery_hours %} ({{ "%.1f"|format(laptop.battery_hours) }}h typical){% endif %}
+            </p>
+            <p><strong>Ports:</strong> {{ laptop.ports|join(", ") }}</p>
+            <p><strong>Good cooling:</strong> {{ "Yes" if laptop.good_cooling else "No" }}</p>
+            <p><strong>RAM upgradable:</strong> {{ "Yes" if laptop.ram_upgradable else "No" }}</p>
+            <p><strong>Extra SSD slot:</strong> {{ "Yes" if laptop.extra_ssd_slot else "No" }}</p>
+        </article>
+    </div>
+    <div class="hero-cta-row">
+        <a class="btn" href="{{ url_for('laptops') }}">Back To Finder</a>
+        <a class="btn secondary" href="{{ url_for('compare', ids=laptop.id) }}">Compare This Laptop</a>
+    </div>
+</article>
+{% else %}
+<article class="card">
+    <h2>Laptop Not Found</h2>
+    <p class="note">Laptop ID {{ laptop_id }} is not available in the local finder dataset.</p>
+    <a class="btn" href="{{ url_for('laptops') }}">Back To Finder</a>
+</article>
+{% endif %}
+{% endblock %}

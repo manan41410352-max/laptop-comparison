@@ -1,29 +1,671 @@
 {% extends "base.html" %}
 
-{% block title %}Laptop Guide | Laptop Finder{% endblock %}
+{% block title %}Laptop Guide | Finder{% endblock %}
 
 {% block content %}
-<section class="card">
-    <h2>Dynamic Laptop Examples</h2>
-    <p>Filter by use case and budget. Data loads from <code>/api/laptops</code>.</p>
-</section>
+<div class="finder-page">
+    <form id="finderForm" method="get" action="{{ url_for('laptops') }}">
+        <div class="finder-layout">
+            <aside class="card finder-sidebar">
+                <div class="finder-sidebar-header">
+                    <div>
+                        <h3>Filters</h3>
+                    </div>
+                    <a class="btn secondary finder-clear" href="{{ url_for('laptops') }}">Clear all</a>
+                </div>
 
-<section class="card filter-row">
-    <label for="useCase">Use Case</label>
-    <select id="useCase">
-        <option value="all">All</option>
-        <option value="gaming">Gaming</option>
-        <option value="coding">Coding</option>
-        <option value="editing">Editing</option>
-        <option value="student">Student</option>
-        <option value="professional">Professional</option>
-    </select>
+                <section class="finder-filter-group">
+                    <p class="finder-group-title">Use Case</p>
+                    <select name="use_case">
+                        <option value="">All profiles</option>
+                        {% for value, label in options.use_cases %}
+                        <option value="{{ value }}" {% if filters.use_case == value %}selected{% endif %}>{{ label }}</option>
+                        {% endfor %}
+                    </select>
+                </section>
 
-    <label for="maxPrice">Max Price (USD)</label>
-    <input id="maxPrice" type="number" min="500" step="50" placeholder="Any">
+                <section class="finder-filter-group">
+                    <p class="finder-group-title">Brand</p>
+                    <div class="finder-checklist">
+                        {% for brand in options.brands %}
+                        <label class="finder-check">
+                            <input type="checkbox" name="brand" value="{{ brand }}" {% if brand in filters.brand %}checked{% endif %}>
+                            <span>{{ brand }}</span>
+                        </label>
+                        {% endfor %}
+                    </div>
+                </section>
 
-    <button id="applyFilters" class="btn" type="button">Apply</button>
-</section>
+                <section class="finder-filter-group">
+                    <p class="finder-group-title">Series</p>
+                    {% for brand_name, series_list in options.series_by_brand.items() %}
+                    <p class="finder-mini-title">{{ brand_name }}</p>
+                    <div class="finder-checklist">
+                        {% for series in series_list %}
+                        <label class="finder-check">
+                            <input type="checkbox" name="series" value="{{ series }}" {% if series in filters.series %}checked{% endif %}>
+                            <span>{{ series }}</span>
+                        </label>
+                        {% endfor %}
+                    </div>
+                    {% endfor %}
+                </section>
 
-<section id="laptopGrid" class="grid-3"></section>
+                <section class="finder-filter-group">
+                    <p class="finder-group-title">Price Range</p>
+                    {% set price_min_value = filters.min_price if filters.min_price is not none else options.price_bounds.min %}
+                    {% set price_max_value = filters.max_price if filters.max_price is not none else options.price_bounds.max %}
+                    <div class="finder-range">
+                        <label class="finder-field">
+                            Min
+                            <input
+                                type="number"
+                                min="{{ options.price_bounds.min }}"
+                                max="{{ options.price_bounds.max }}"
+                                step="{{ options.price_bounds.step }}"
+                                name="min_price"
+                                value="{{ filters.min_price if filters.min_price is not none else '' }}"
+                                placeholder="Any"
+                            >
+                        </label>
+                        <label class="finder-field">
+                            Max
+                            <input
+                                type="number"
+                                min="{{ options.price_bounds.min }}"
+                                max="{{ options.price_bounds.max }}"
+                                step="{{ options.price_bounds.step }}"
+                                name="max_price"
+                                value="{{ filters.max_price if filters.max_price is not none else '' }}"
+                                placeholder="Any"
+                            >
+                        </label>
+                    </div>
+                    <div class="finder-price-slider-wrap">
+                        <p class="finder-mini-title">Budget slider (min-max)</p>
+                        <div class="finder-price-dual-slider" id="priceDualSlider">
+                            <div class="finder-price-slider-track"></div>
+                            <div class="finder-price-slider-progress" id="priceSliderProgress"></div>
+                            <input
+                                id="minPriceRange"
+                                class="finder-price-slider finder-price-slider-min"
+                                type="range"
+                                min="{{ options.price_bounds.min }}"
+                                max="{{ options.price_bounds.max }}"
+                                step="{{ options.price_bounds.step }}"
+                                value="{{ price_min_value }}"
+                                aria-label="Minimum price slider"
+                            >
+                            <input
+                                id="maxPriceRange"
+                                class="finder-price-slider finder-price-slider-max"
+                                type="range"
+                                min="{{ options.price_bounds.min }}"
+                                max="{{ options.price_bounds.max }}"
+                                step="{{ options.price_bounds.step }}"
+                                value="{{ price_max_value }}"
+                                aria-label="Maximum price slider"
+                            >
+                        </div>
+                        <div class="finder-price-slider-meta">
+                            <strong id="minPriceRangeValue">₹{{ "{:,.0f}".format(price_min_value) }}</strong>
+                            <strong id="maxPriceRangeValue">₹{{ "{:,.0f}".format(price_max_value) }}</strong>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="finder-filter-group">
+                    <p class="finder-group-title">Processor</p>
+                    <div class="finder-tier-grid">
+                        {% for brand, tiers in options.cpu_tiers.items() %}
+                        <div class="finder-tier-group">
+                            <p class="finder-mini-title">{{ brand }}</p>
+                            <div class="finder-checklist">
+                                {% for tier in tiers %}
+                                <label class="finder-check">
+                                    <input type="checkbox" name="cpu_tier" value="{{ tier }}" {% if tier in filters.cpu_tier %}checked{% endif %}>
+                                    <span>{{ tier }}</span>
+                                </label>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </section>
+
+                <section class="finder-filter-group">
+                    <p class="finder-group-title">RAM</p>
+                    <div class="finder-checklist">
+                        {% for ram in options.ram_options %}
+                        <label class="finder-check">
+                            <input type="checkbox" name="ram" value="{{ ram }}" {% if ram in filters.ram %}checked{% endif %}>
+                            <span>{{ ram }}GB</span>
+                        </label>
+                        {% endfor %}
+                    </div>
+                </section>
+
+                <section class="finder-filter-group">
+                    <p class="finder-group-title">Storage</p>
+                    <div class="finder-checklist">
+                        {% for storage_type in options.storage_types %}
+                        <label class="finder-check">
+                            <input type="checkbox" name="storage_type" value="{{ storage_type }}" {% if storage_type in filters.storage_type %}checked{% endif %}>
+                            <span>{{ storage_type }}</span>
+                        </label>
+                        {% endfor %}
+                    </div>
+                    <p class="finder-mini-title">Minimum size</p>
+                    <div class="finder-checklist">
+                        <label class="finder-check">
+                            <input type="radio" name="storage_min" value="" {% if filters.storage_min is none %}checked{% endif %}>
+                            <span>Any</span>
+                        </label>
+                        {% for min_size in options.storage_min_options %}
+                        {% if min_size >= 1024 and min_size % 1024 == 0 %}
+                        {% set min_label = (min_size // 1024) ~ "TB+" %}
+                        {% else %}
+                        {% set min_label = min_size ~ "GB+" %}
+                        {% endif %}
+                        <label class="finder-check">
+                            <input type="radio" name="storage_min" value="{{ min_size }}" {% if filters.storage_min == min_size %}checked{% endif %}>
+                            <span>{{ min_label }}</span>
+                        </label>
+                        {% endfor %}
+                    </div>
+                </section>
+
+                <section class="finder-filter-group">
+                    <p class="finder-group-title">GPU</p>
+                    <div class="finder-checklist">
+                        {% for gpu in options.gpu_models %}
+                        <label class="finder-check">
+                            <input type="checkbox" name="gpu_model" value="{{ gpu }}" {% if gpu in filters.gpu_model %}checked{% endif %}>
+                            <span>{{ gpu }}</span>
+                        </label>
+                        {% endfor %}
+                    </div>
+                </section>
+
+                <section class="finder-filter-group">
+                    <p class="finder-group-title">Display</p>
+                    <p class="finder-mini-title">Size</p>
+                    <div class="finder-checklist">
+                        {% for bucket in options.screen_buckets %}
+                        <label class="finder-check">
+                            <input type="checkbox" name="screen_bucket" value="{{ bucket }}" {% if bucket in filters.screen_bucket %}checked{% endif %}>
+                            <span>{{ bucket }}</span>
+                        </label>
+                        {% endfor %}
+                    </div>
+                    <p class="finder-mini-title">Resolution</p>
+                    <div class="finder-checklist">
+                        {% for resolution in options.resolutions %}
+                        <label class="finder-check">
+                            <input type="checkbox" name="resolution" value="{{ resolution }}" {% if resolution in filters.resolution %}checked{% endif %}>
+                            <span>{{ resolution }}</span>
+                        </label>
+                        {% endfor %}
+                    </div>
+                    <p class="finder-mini-title">Refresh</p>
+                    <div class="finder-checklist">
+                        {% for refresh in options.refresh_options %}
+                        <label class="finder-check">
+                            <input type="checkbox" name="refresh" value="{{ refresh }}" {% if refresh in filters.refresh %}checked{% endif %}>
+                            <span>{{ refresh }}{% if refresh != "240+" %}Hz{% endif %}</span>
+                        </label>
+                        {% endfor %}
+                    </div>
+                    <p class="finder-mini-title">Panel</p>
+                    <div class="finder-checklist">
+                        {% for panel in options.panels %}
+                        <label class="finder-check">
+                            <input type="checkbox" name="panel" value="{{ panel }}" {% if panel in filters.panel %}checked{% endif %}>
+                            <span>{{ panel }}</span>
+                        </label>
+                        {% endfor %}
+                    </div>
+                </section>
+
+                <section class="finder-filter-group">
+                    <p class="finder-group-title">Weight</p>
+                    <div class="finder-checklist">
+                        {% for bucket in options.weight_buckets %}
+                        <label class="finder-check">
+                            <input type="checkbox" name="weight_bucket" value="{{ bucket }}" {% if bucket in filters.weight_bucket %}checked{% endif %}>
+                            <span>{{ bucket }}</span>
+                        </label>
+                        {% endfor %}
+                    </div>
+                </section>
+
+                <section class="finder-filter-group">
+                    <p class="finder-group-title">Battery</p>
+                    <div class="finder-checklist">
+                        {% for bucket in options.battery_buckets %}
+                        <label class="finder-check">
+                            <input type="checkbox" name="battery_bucket" value="{{ bucket }}" {% if bucket in filters.battery_bucket %}checked{% endif %}>
+                            <span>{{ bucket }}</span>
+                        </label>
+                        {% endfor %}
+                    </div>
+                </section>
+
+                <section class="finder-filter-group">
+                    <p class="finder-group-title">Extras</p>
+                    <div class="finder-checklist">
+                        {% for key, label in options.extras %}
+                        <label class="finder-check">
+                            <input type="checkbox" name="{{ key }}" value="1" {% if filters[key] %}checked{% endif %}>
+                            <span>{{ label }}</span>
+                        </label>
+                        {% endfor %}
+                    </div>
+                </section>
+
+                <div class="finder-submit-row">
+                    <button class="btn" type="submit">Apply Filters</button>
+                </div>
+            </aside>
+
+            <section class="finder-results">
+                <article class="card finder-toolbar">
+                    <div class="finder-toolbar-top">
+                        <div>
+                            <h2>Laptop Finder</h2>
+                            <p class="note">{{ counts.total }} laptops found{% if counts.total %} (showing {{ counts.from }}-{{ counts.to }}){% endif %}</p>
+                        </div>
+                    </div>
+
+                    <div class="finder-controls">
+                        <label class="finder-field">
+                            Search
+                            <input type="search" name="q" value="{{ filters.q }}" placeholder="Search brand or model">
+                        </label>
+                        <label class="finder-field">
+                            Sort
+                            <select name="sort">
+                                {% for value, label in options.sort_options %}
+                                <option value="{{ value }}" {% if filters.sort == value %}selected{% endif %}>{{ label }}</option>
+                                {% endfor %}
+                            </select>
+                        </label>
+                        <label class="finder-field">
+                            Per page
+                            <select name="per_page">
+                                {% for value in options.per_page_options %}
+                                <option value="{{ value }}" {% if filters.per_page == value %}selected{% endif %}>{{ value }}</option>
+                                {% endfor %}
+                            </select>
+                        </label>
+                        <button class="btn" type="submit">Update</button>
+                        <a class="btn secondary" href="{{ url_for('laptops') }}">Clear all</a>
+                    </div>
+                </article>
+
+                {% if active_chips %}
+                <div class="filter-chip-row finder-chip-row">
+                    {% for chip in active_chips %}
+                    <a class="filter-chip" href="{{ chip.remove_url }}">{{ chip.label }} x</a>
+                    {% endfor %}
+                </div>
+                {% endif %}
+
+                {% if laptops %}
+                <div class="finder-results-grid">
+                    {% for laptop in laptops %}
+                    <article class="card finder-laptop-card">
+                        <div class="finder-thumb">
+                            <img
+                                src="{{ laptop.image_url or url_for('static', filename='images/laptop-placeholder.svg') }}"
+                                alt="{{ laptop.brand }} {{ laptop.model }}"
+                                loading="lazy"
+                                onerror="this.onerror=null;this.src='{{ url_for('static', filename='images/laptop-placeholder.svg') }}';"
+                            >
+                        </div>
+                        <h3 class="finder-title">{{ laptop.brand }} {{ laptop.model }}</h3>
+                        <p class="laptop-meta">{{ laptop.series }} | ₹{{ "{:,.0f}".format(laptop.price) }} | Rating {{ "%.1f"|format(laptop.rating) }}</p>
+                        <div class="finder-spec-list">
+                            <p><strong>SKU:</strong> {{ laptop.sku }}</p>
+                            <p><strong>CPU:</strong> {{ laptop.cpu_model }}</p>
+                            <p><strong>GPU:</strong> {{ laptop.gpu_model }} ({{ laptop.gpu_type }})</p>
+                            <p><strong>RAM:</strong> {{ laptop.ram_gb }}GB | <strong>Storage:</strong> {{ laptop.storage_gb }}GB {{ laptop.storage_type }}</p>
+                            <p><strong>Display:</strong> {{ laptop.screen_size }}" {{ laptop.resolution }} {{ laptop.refresh_hz }}Hz {{ laptop.panel }}</p>
+                            {% if laptop.specs.customization_options %}
+                            <p><strong>Customization:</strong> CTO available ({{ laptop.specs.customization_options|length }} options)</p>
+                            {% endif %}
+                            {% if laptop.customization_available %}
+                            <p><strong>Native Config:</strong> Available on this site</p>
+                            {% elif laptop.brand == "Lenovo" %}
+                            <p><strong>Native Config:</strong> Not available for this Lenovo SKU</p>
+                            {% endif %}
+                            <p>
+                                <strong>Weight:</strong> {{ "%.2f"|format(laptop.weight_kg) }}kg |
+                                <strong>Battery:</strong>
+                                {% if laptop.battery_capacity_wh %}{{ laptop.battery_capacity_wh }} Wh{% else %}NA{% endif %}
+                                {% if laptop.battery_hours %} ({{ "%.1f"|format(laptop.battery_hours) }}h typical){% endif %}
+                            </p>
+                            <p><strong>Product:</strong> <a href="{{ laptop.product_url }}" target="_blank" rel="noopener noreferrer">Official product page</a></p>
+                        </div>
+                        <div class="finder-tags">
+                            {% for use_case in laptop.use_cases %}
+                            <span class="finder-tag">{{ use_case.title() }}</span>
+                            {% endfor %}
+                        </div>
+                        <div class="finder-card-actions">
+                            <div class="finder-card-actions-row">
+                                <a class="btn" href="{{ url_for('product_detail', product_id=laptop.id) }}">View Details</a>
+                                <a class="btn secondary" href="{{ url_for('product_detail', product_id=laptop.id) }}#reviews">Reviews</a>
+                            </div>
+                            <div class="finder-card-actions-row">
+                                {% if laptop.customization_available %}
+                                <a class="btn secondary" href="{{ url_for('product_detail', product_id=laptop.id) }}#configuration">Customize</a>
+                                {% else %}
+                                <span class="btn secondary is-disabled" aria-disabled="true">Customize</span>
+                                {% endif %}
+                                <a class="btn secondary" href="{{ url_for('compare', ids=laptop.id) }}">Compare</a>
+                            </div>
+                            <label class="compare-pick-label">
+                                <input class="compare-pick" type="checkbox" value="{{ laptop.id }}">
+                                <span>Select</span>
+                            </label>
+                        </div>
+                    </article>
+                    {% endfor %}
+                </div>
+
+                <article id="compareBar" class="card finder-compare-bar" hidden>
+                    <p class="note"><strong id="compareCount">0</strong> selected (max 4)</p>
+                    <div class="finder-compare-actions">
+                        <a id="compareLink" class="btn" href="{{ url_for('compare') }}">Compare Selected</a>
+                        <button id="compareClear" class="btn secondary" type="button">Clear Selection</button>
+                    </div>
+                </article>
+                {% else %}
+                <article class="card finder-empty">
+                    <h3>No laptops match these filters.</h3>
+                    <p class="note">Try removing some filters or clear all and start with use case + budget.</p>
+                    <a class="btn" href="{{ url_for('laptops') }}">Clear Filters</a>
+                </article>
+                {% endif %}
+
+                {% if pagination.total_pages > 1 %}
+                <nav class="card finder-pagination" aria-label="Finder pagination">
+                    <div>
+                        <strong>Page {{ pagination.page }} of {{ pagination.total_pages }}</strong>
+                        <p class="note">{{ counts.total }} total results</p>
+                    </div>
+                    <div class="finder-pagination-actions">
+                        {% if pagination.has_prev %}
+                        <a class="btn secondary" href="{{ pagination.prev_url }}">Previous</a>
+                        {% endif %}
+                        {% if pagination.has_next %}
+                        <a class="btn" href="{{ pagination.next_url }}">Next</a>
+                        {% endif %}
+                    </div>
+                </nav>
+                {% endif %}
+            </section>
+        </div>
+    </form>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+(function () {
+    const form = document.getElementById("finderForm");
+    const sidebar = document.querySelector(".finder-sidebar");
+
+    const SCROLL_KEY = "finder:scrollY";
+    const SIDEBAR_SCROLL_KEY = "finder:sidebarScrollTop";
+
+    const saveScrollState = () => {
+        try {
+            sessionStorage.setItem(SCROLL_KEY, String(window.scrollY || window.pageYOffset || 0));
+            if (sidebar) {
+                sessionStorage.setItem(SIDEBAR_SCROLL_KEY, String(sidebar.scrollTop || 0));
+            }
+        } catch (error) {
+            // ignore storage errors
+        }
+    };
+
+    const restoreScrollState = () => {
+        try {
+            const savedScrollY = Number(sessionStorage.getItem(SCROLL_KEY));
+            const savedSidebarTop = Number(sessionStorage.getItem(SIDEBAR_SCROLL_KEY));
+
+            window.requestAnimationFrame(() => {
+                if (Number.isFinite(savedScrollY) && savedScrollY >= 0) {
+                    window.scrollTo(0, savedScrollY);
+                }
+                if (sidebar && Number.isFinite(savedSidebarTop) && savedSidebarTop >= 0) {
+                    sidebar.scrollTop = savedSidebarTop;
+                }
+            });
+        } catch (error) {
+            // ignore storage errors
+        }
+    };
+
+    restoreScrollState();
+    window.addEventListener("beforeunload", saveScrollState);
+
+    if (form) {
+        const minPriceInput = form.querySelector('input[name="min_price"]');
+        const maxPriceInput = form.querySelector('input[name="max_price"]');
+        const minPriceRange = document.getElementById("minPriceRange");
+        const maxPriceRange = document.getElementById("maxPriceRange");
+        const minPriceRangeValue = document.getElementById("minPriceRangeValue");
+        const maxPriceRangeValue = document.getElementById("maxPriceRangeValue");
+        const priceSliderProgress = document.getElementById("priceSliderProgress");
+
+        const formatCurrency = (value) => `₹${Math.round(value).toLocaleString("en-IN")}`;
+        const clampToRange = (value, minValue, maxValue) => {
+            const numeric = Number(value);
+            if (!Number.isFinite(numeric)) {
+                return minValue;
+            }
+            return Math.max(minValue, Math.min(maxValue, Math.round(numeric)));
+        };
+
+        if (minPriceInput && maxPriceInput && minPriceRange && maxPriceRange) {
+            const dualSlider = document.getElementById("priceDualSlider");
+            const rangeMin = Number(minPriceRange.min) || 0;
+            const rangeMax = Number(maxPriceRange.max) || rangeMin;
+            const rangeStep = Number(maxPriceRange.step) || 1000;
+
+            const normalizeToStep = (value) => {
+                const clamped = clampToRange(value, rangeMin, rangeMax);
+                const stepped = rangeMin + Math.round((clamped - rangeMin) / rangeStep) * rangeStep;
+                return clampToRange(stepped, rangeMin, rangeMax);
+            };
+
+            let minValue = minPriceInput.value.trim() ? normalizeToStep(minPriceInput.value) : rangeMin;
+            let maxValue = maxPriceInput.value.trim() ? normalizeToStep(maxPriceInput.value) : rangeMax;
+            if (minValue > maxValue) {
+                maxValue = minValue;
+            }
+
+            const setSliderProgress = () => {
+                const denominator = Math.max(1, rangeMax - rangeMin);
+                const leftPercent = ((minValue - rangeMin) / denominator) * 100;
+                const rightPercent = ((maxValue - rangeMin) / denominator) * 100;
+                if (priceSliderProgress) {
+                    priceSliderProgress.style.left = `${leftPercent}%`;
+                    priceSliderProgress.style.width = `${Math.max(0, rightPercent - leftPercent)}%`;
+                }
+            };
+
+            const setHandlePriority = (active) => {
+                if (active === "min") {
+                    minPriceRange.style.zIndex = "4";
+                    maxPriceRange.style.zIndex = "3";
+                } else {
+                    minPriceRange.style.zIndex = "3";
+                    maxPriceRange.style.zIndex = "4";
+                }
+            };
+
+            const render = () => {
+                minPriceRange.value = String(minValue);
+                maxPriceRange.value = String(maxValue);
+                minPriceInput.value = String(minValue);
+                maxPriceInput.value = String(maxValue);
+                if (minPriceRangeValue) {
+                    minPriceRangeValue.textContent = formatCurrency(minValue);
+                }
+                if (maxPriceRangeValue) {
+                    maxPriceRangeValue.textContent = formatCurrency(maxValue);
+                }
+                setSliderProgress();
+            };
+
+            const updateFromInputs = (source) => {
+                const typedMin = minPriceInput.value.trim();
+                const typedMax = maxPriceInput.value.trim();
+                let nextMin = typedMin ? normalizeToStep(typedMin) : rangeMin;
+                let nextMax = typedMax ? normalizeToStep(typedMax) : rangeMax;
+                if (nextMin > nextMax) {
+                    if (source === "min") {
+                        nextMax = nextMin;
+                    } else {
+                        nextMin = nextMax;
+                    }
+                }
+                minValue = nextMin;
+                maxValue = nextMax;
+                render();
+            };
+
+            const updateFromSlider = (source) => {
+                const nextMin = normalizeToStep(minPriceRange.value);
+                const nextMax = normalizeToStep(maxPriceRange.value);
+                if (source === "min") {
+                    minValue = Math.min(nextMin, maxValue);
+                } else {
+                    maxValue = Math.max(nextMax, minValue);
+                }
+                render();
+            };
+
+            minPriceRange.addEventListener("input", () => {
+                setHandlePriority("min");
+                updateFromSlider("min");
+            });
+            maxPriceRange.addEventListener("input", () => {
+                setHandlePriority("max");
+                updateFromSlider("max");
+            });
+            minPriceRange.addEventListener("pointerdown", () => setHandlePriority("min"));
+            maxPriceRange.addEventListener("pointerdown", () => setHandlePriority("max"));
+
+            minPriceInput.addEventListener("input", () => updateFromInputs("min"));
+            maxPriceInput.addEventListener("input", () => updateFromInputs("max"));
+            minPriceInput.addEventListener("blur", () => updateFromInputs("min"));
+            maxPriceInput.addEventListener("blur", () => updateFromInputs("max"));
+
+            if (dualSlider) {
+                dualSlider.addEventListener("pointerdown", (event) => {
+                    if (
+                        event.target === minPriceRange ||
+                        event.target === maxPriceRange ||
+                        event.target.closest(".finder-price-slider")
+                    ) {
+                        return;
+                    }
+                    const rect = dualSlider.getBoundingClientRect();
+                    const ratio = rect.width > 0 ? (event.clientX - rect.left) / rect.width : 0;
+                    const boundedRatio = Math.max(0, Math.min(1, ratio));
+                    const rawValue = rangeMin + boundedRatio * (rangeMax - rangeMin);
+                    const snapped = normalizeToStep(rawValue);
+                    const pickMin = Math.abs(snapped - minValue) <= Math.abs(snapped - maxValue);
+                    if (pickMin) {
+                        minValue = Math.min(snapped, maxValue);
+                        setHandlePriority("min");
+                    } else {
+                        maxValue = Math.max(snapped, minValue);
+                        setHandlePriority("max");
+                    }
+                    render();
+                });
+            }
+
+            setHandlePriority("max");
+            render();
+        }
+
+        form.addEventListener("submit", () => {
+            saveScrollState();
+        });
+
+        let submitTimer = null;
+        form.addEventListener("change", (event) => {
+            const target = event.target;
+            if (!target || !target.name) {
+                return;
+            }
+            if (target.classList.contains("compare-pick")) {
+                return;
+            }
+            if (target.name === "q" || target.name === "min_price" || target.name === "max_price") {
+                return;
+            }
+            window.clearTimeout(submitTimer);
+            submitTimer = window.setTimeout(() => {
+                saveScrollState();
+                form.submit();
+            }, 120);
+        });
+    }
+
+    const compareBoxes = Array.from(document.querySelectorAll(".compare-pick"));
+    const compareBar = document.getElementById("compareBar");
+    const compareCount = document.getElementById("compareCount");
+    const compareLink = document.getElementById("compareLink");
+    const compareClear = document.getElementById("compareClear");
+    if (!compareBoxes.length || !compareBar || !compareCount || !compareLink) {
+        return;
+    }
+
+    const selected = new Set();
+
+    function syncCompareBar() {
+        const ids = Array.from(selected);
+        compareCount.textContent = String(ids.length);
+        compareBar.hidden = ids.length === 0;
+        compareLink.href = ids.length
+            ? `{{ url_for('compare') }}?ids=${ids.join(",")}`
+            : "{{ url_for('compare') }}";
+    }
+
+    compareBoxes.forEach((box) => {
+        box.addEventListener("change", () => {
+            if (box.checked) {
+                if (selected.size >= 4) {
+                    box.checked = false;
+                    return;
+                }
+                selected.add(box.value);
+            } else {
+                selected.delete(box.value);
+            }
+            syncCompareBar();
+        });
+    });
+
+    if (compareClear) {
+        compareClear.addEventListener("click", () => {
+            selected.clear();
+            compareBoxes.forEach((box) => {
+                box.checked = false;
+            });
+            syncCompareBar();
+        });
+    }
+
+    syncCompareBar();
+})();
+</script>
 {% endblock %}
